@@ -70,3 +70,48 @@ export type WrongWord = {
   accuracy: number;
   lastReviewedAt: string | null;
 };
+
+export type ClassItem = {
+  id: number;
+  name: string;
+  grade: string;
+};
+
+export type StudentItem = {
+  id: number;
+  name: string;
+  classId: number;
+  username: string;
+  isActive: number;
+};
+
+export type AccountsBootstrap = {
+  classes: ClassItem[];
+  students: StudentItem[];
+  defaultStudentId: number | null;
+};
+
+export type SpellingResult = {
+  success: boolean;
+  isCorrect: boolean;
+  target: string;
+  hint: string;
+  firstMismatchIndex: number;
+  distance: number;
+};
+
+export type ReportSummary = {
+  studentName: string;
+  className: string;
+  period: 'weekly' | 'monthly';
+  startDate: string;
+  endDate: string;
+  checkinDays: number;
+  readingCount: number;
+  spellingCount: number;
+  spellingAccuracy: number;
+  topWrongWords: {
+    word: string;
+    wrongCount: number;
+  }[];
+};

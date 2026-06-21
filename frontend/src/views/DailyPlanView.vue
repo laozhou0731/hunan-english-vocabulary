@@ -42,6 +42,9 @@ const startDictation = (wordId: number) => {
 };
 
 onMounted(async () => {
+  if (!store.selectedStudentId) {
+    await store.bootstrapAccounts();
+  }
   await Promise.all([store.loadPlan(), store.loadStats()]);
 });
 </script>

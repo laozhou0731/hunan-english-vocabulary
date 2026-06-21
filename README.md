@@ -7,8 +7,12 @@
 - 完整词库结构（按教学模块字段分类：模块、词性、音标、释义）
 - 每日 30 词计划自动生成
 - 跟读训练（音频发音）+ 默写判定
+- 班级/学生账号体系（支持切换学习账号）
+- 默写错误字母级提示（首个错误位提示）
+- 基于遗忘曲线思想的 SRS 调度（间隔、难度因子、到期复习）
 - 打卡过关与连续打卡天数统计
 - 学习进度看板：完成量趋势、默写正确率趋势、薄弱词 Top10
+- 学习报告（周报/月报）与 CSV 导出
 
 ## 技术栈
 
@@ -106,14 +110,20 @@ npm run dev
 
 ## 核心 API
 
-- `GET /api/daily-plan?date=YYYY-MM-DD`：获取/生成当日 30 词
-- `POST /api/daily-plan/:wordId/reading`：提交跟读完成
-- `POST /api/daily-plan/:wordId/spelling`：提交默写答案
-- `POST /api/checkin`：当日过关打卡
-- `GET /api/stats/overview?days=30`：学习统计看板
-- `GET /api/words?query=&level=`：词库查询
+- `GET /api/accounts/bootstrap`：获取班级与学生账号
+- `POST /api/classes`：创建班级
+- `POST /api/students`：创建学生
+- `GET /api/daily-plan?date=YYYY-MM-DD&studentId=1`：获取/生成当日 30 词
+- `POST /api/daily-plan/:wordId/reading`：提交跟读完成（body 含 `date`、`studentId`）
+- `POST /api/daily-plan/:wordId/spelling`：提交默写答案（返回 `hint`、`firstMismatchIndex`）
+- `POST /api/checkin`：当日过关打卡（body 含 `date`、`studentId`）
+- `GET /api/stats/overview?days=30&studentId=1`：学习统计看板
+- `GET /api/words?query=&level=&studentId=1`：词库查询
+- `GET /api/words/wrong?studentId=1`：错词本
+- `GET /api/reports/summary?studentId=1&period=weekly|monthly`：学习报告摘要
+- `GET /api/reports/export?studentId=1&period=weekly|monthly`：导出 CSV 报告
 
-## 后续可扩展
+## 已完成扩展
 
 - 接入账号体系（班级、学生）
 - 默写评分细化（字母级错误提示）

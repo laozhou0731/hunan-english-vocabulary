@@ -19,7 +19,12 @@ const playAudio = (url: string) => {
   });
 };
 
-onMounted(search);
+onMounted(async () => {
+  if (!store.selectedStudentId) {
+    await store.bootstrapAccounts();
+  }
+  await search();
+});
 </script>
 
 <template>

@@ -13,6 +13,9 @@ const formatTime = (value: string | null) => {
 };
 
 onMounted(async () => {
+  if (!store.selectedStudentId) {
+    await store.bootstrapAccounts();
+  }
   await store.loadWrongWords(120);
 });
 </script>

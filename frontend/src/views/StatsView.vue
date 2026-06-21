@@ -7,6 +7,9 @@ import { useStudyStore } from '../stores/study';
 const store = useStudyStore();
 
 onMounted(async () => {
+  if (!store.selectedStudentId) {
+    await store.bootstrapAccounts();
+  }
   if (!store.stats) {
     await store.loadStats(30);
   }
