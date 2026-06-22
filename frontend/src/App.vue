@@ -1,42 +1,9 @@
-<script setup lang="ts">
-import { onMounted } from 'vue';
-import { storeToRefs } from 'pinia';
-import { useStudyStore } from './stores/study';
-
-const store = useStudyStore();
-const { classes, students, selectedClassId, selectedStudentId } = storeToRefs(store);
-
-const classStudents = () => students.value.filter((item) => item.classId === selectedClassId.value);
-
-const handleClassChange = async (event: Event) => {
-  const value = Number((event.target as HTMLSelectElement).value);
-  await store.switchClass(value);
-};
-
-const handleStudentChange = async (event: Event) => {
-  const value = Number((event.target as HTMLSelectElement).value);
-  await store.switchStudent(value);
-};
-
-onMounted(async () => {
-  await store.bootstrapAccounts();
-});
-</script>
-
 <template>
   <div class="layout">
     <header class="topbar">
       <div class="brand">
         <p class="small">HUNAN ENGLISH</p>
         <h2>英语学习打开</h2>
-      </div>
-      <div class="account-box" v-if="classes.length > 0">
-        <select :value="selectedClassId ?? ''" @change="handleClassChange">
-          <option v-for="item in classes" :key="item.id" :value="item.id">{{ item.grade }}·{{ item.name }}</option>
-        </select>
-        <select :value="selectedStudentId ?? ''" @change="handleStudentChange">
-          <option v-for="item in classStudents()" :key="item.id" :value="item.id">{{ item.name }}</option>
-        </select>
       </div>
       <nav>
         <RouterLink to="/daily" class="link" active-class="active">每日计划</RouterLink>
@@ -92,19 +59,6 @@ nav {
   margin-left: auto;
 }
 
-.account-box {
-  display: flex;
-  gap: 8px;
-}
-
-.account-box select {
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.86);
-  padding: 8px 10px;
-  color: #30373f;
-}
-
 .link {
   color: #4f5862;
   text-decoration: none;
@@ -144,14 +98,6 @@ nav {
     align-items: flex-start;
     margin-bottom: 12px;
     gap: 10px;
-  }
-
-  .account-box {
-    width: 100%;
-  }
-
-  .account-box select {
-    flex: 1;
   }
 
   .brand h2 {

@@ -53,11 +53,11 @@ onMounted(async () => {
   <section class="page">
     <header class="hero">
       <p class="date">DAY PLAN {{ store.today }}</p>
-      <h1>每日 30 词学习闭环</h1>
-      <p class="progress">今日完成 {{ store.plan?.completed ?? 0 }} / {{ store.plan?.total ?? 30 }}（{{ store.completionRate }}%）</p>
+      <h1>每日 20 词学习闭环</h1>
+      <p class="progress">今日完成 {{ store.plan?.completed ?? 0 }} / {{ store.plan?.total ?? 20 }}（{{ store.completionRate }}%）</p>
       <div class="checkin-row">
         <button class="checkin-btn" :disabled="!store.unlockedCheckin" @click="store.checkinToday">
-          {{ store.unlockedCheckin ? '立即打卡' : '完成30词后可打卡' }}
+          {{ store.unlockedCheckin ? '立即打卡' : '完成20词后可打卡' }}
         </button>
         <span class="checkin-msg">{{ store.checkinMessage }}</span>
       </div>
@@ -72,7 +72,7 @@ onMounted(async () => {
           <span>{{ item.level }}</span>
         </div>
         <p class="meta">
-          {{ shouldHideWord(item) ? '默写模式：单词已隐藏' : item.phonetic }} · {{ item.category }}
+          {{ item.phonetic }} · {{ item.category }}{{ shouldHideWord(item) ? ' · 默写中' : '' }}
         </p>
         <p class="meaning">{{ item.meaning }}</p>
 

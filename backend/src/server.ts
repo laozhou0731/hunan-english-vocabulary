@@ -30,7 +30,7 @@ app.get('/api/health', (_req, res) => {
 app.get('/api/daily-plan', async (req, res) => {
   const date = (req.query.date as string | undefined) ?? dayjs().format('YYYY-MM-DD');
   const studentId = Number(req.query.studentId ?? 1);
-  const words = await ensureDailyPlan(date, studentId, 30);
+  const words = await ensureDailyPlan(date, studentId, 20);
 
   const completed = words.filter((w) => w.readingDone && w.spellingDone).length;
 

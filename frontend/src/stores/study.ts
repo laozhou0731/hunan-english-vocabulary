@@ -10,7 +10,7 @@ import {
   submitReading,
   submitSpelling
 } from '../api';
-import type { ClassItem, DailyPlanResponse, LibraryWord, OverviewStats, StudentItem, WrongWord } from '../types';
+import type { DailyPlanResponse, LibraryWord, OverviewStats, WrongWord } from '../types';
 
 type SpellingFeedback = {
   ok: boolean;
@@ -26,11 +26,7 @@ export const useStudyStore = defineStore('study', {
     stats: null as OverviewStats | null,
     library: [] as LibraryWord[],
     wrongWords: [] as WrongWord[],
-    classes: [] as ClassItem[],
-    students: [] as StudentItem[],
-    selectedClassId: null as number | null,
     selectedStudentId: null as number | null,
-    loadingAccounts: false,
     loadingPlan: false,
     loadingStats: false,
     loadingLibrary: false,
@@ -54,38 +50,23 @@ export const useStudyStore = defineStore('study', {
   },
   actions: {
     async bootstrapAccounts() {
-      this.loadingAccounts = true;
       try {
         const data = await fetchAccountsBootstrap();
-        this.classes = data.classes;
-        this.students = data.students;
 
         const saved = Number(localStorage.getItem(STUDENT_ID_KEY) ?? 0);
-        const fallback = data.defaultStudentId ?? data.students[0]?.id ?? null;
-        const selected = data.students.find((s) => s.id === saved) ? saved : fallback;
+        const fallback = data.defaultStudentId ?? null;
+        const selected = saved > 0 ? saved : fallback;
 
         this.selectedStudentId = selected;
-        const current = data.students.find((s) => s.id === selected);
-        this.selectedClassId = current?.classId ?? data.classes[0]?.id ?? null;
 
         if (selected) {
           localStorage.setItem(STUDENT_ID_KEY, String(selected));
         }
       } finally {
-        this.loadingAccounts = false;
+        if (!this.selectedStudentId) {
+          this.selectedStudentId = 1;
+        }
       }
-    },
-    async switchClass(classId: number) {
-      this.selectedClassId = classId;
-      const first = this.students.find((s) => s.classId === classId);
-      if (first) {
-        await this.switchStudent(first.id);
-      }
-    },
-    async switchStudent(studentId: number) {
-      this.selectedStudentId = studentId;
-      localStorage.setItem(STUDENT_ID_KEY, String(studentId));
-      await Promise.all([this.loadPlan(), this.loadStats(), this.loadWrongWords(120)]);
     },
     async loadPlan() {
       if (!this.selectedStudentId) {

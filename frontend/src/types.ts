@@ -71,23 +71,7 @@ export type WrongWord = {
   lastReviewedAt: string | null;
 };
 
-export type ClassItem = {
-  id: number;
-  name: string;
-  grade: string;
-};
-
-export type StudentItem = {
-  id: number;
-  name: string;
-  classId: number;
-  username: string;
-  isActive: number;
-};
-
 export type AccountsBootstrap = {
-  classes: ClassItem[];
-  students: StudentItem[];
   defaultStudentId: number | null;
 };
 

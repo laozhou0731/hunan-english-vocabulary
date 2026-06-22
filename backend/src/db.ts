@@ -367,7 +367,7 @@ const chooseWordsForPlan = async (db: AppDatabase, studentId: number, planDate: 
   return selected.slice(0, targetSize);
 };
 
-export const ensureDailyPlan = async (planDate: string, studentId: number, targetSize = 30) => {
+export const ensureDailyPlan = async (planDate: string, studentId: number, targetSize = 20) => {
   const db = await getDb();
   const existing = await db.get<{ plan_date: string }>(
     'SELECT plan_date FROM student_daily_plans WHERE plan_date = ? AND student_id = ?',
@@ -581,7 +581,7 @@ export const createCheckinIfEligible = async (planDate: string, studentId: numbe
   const done = progress?.done ?? 0;
 
   if (total === 0 || done < total) {
-    return { success: false, message: '请先完成当日30词跟读和默写' };
+    return { success: false, message: '请先完成当日20词跟读和默写' };
   }
 
   const existing = await db.get<{ streak: number }>(
