@@ -34,14 +34,21 @@
     color: var(--muted); cursor: pointer; font-size: 14px; }
   .search button:hover { color: var(--accent); border-color: var(--accent); }
 
-  .alpha { display: flex; flex-wrap: wrap; gap: 6px; padding-bottom: 14px; }
-  .alpha button { min-width: 34px; height: 32px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--line);
-    background: var(--paper); color: var(--ink); cursor: pointer; font: 600 14px Georgia, serif; transition: all .15s; }
-  .alpha button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
-  .alpha button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .alpha button:disabled { opacity: .3; cursor: default; }
+  .layout { max-width: 1120px; margin: 0 auto; padding: 18px 20px 40px; display: flex; gap: 24px; align-items: flex-start; }
+  .alpha { width: 150px; flex: 0 0 150px; position: sticky; top: 18px; max-height: calc(100vh - 36px); overflow-y: auto;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 8px; }
+  .alpha button { width: 100%; display: flex; justify-content: space-between; align-items: center; height: 34px;
+    padding: 0 12px; margin-bottom: 2px; border-radius: 9px; border: 1px solid transparent; background: none;
+    color: var(--ink); cursor: pointer; font-size: 14px; transition: background .15s, color .15s; }
+  .alpha button .letter { font: 700 15px Georgia, serif; }
+  .alpha button .num { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .alpha button:hover:not(:disabled) { background: var(--accent-soft); color: var(--accent); }
+  .alpha button.active { background: var(--accent); color: #fff; }
+  .alpha button.active .num { color: rgba(255,255,255,.8); }
+  .alpha button:disabled { opacity: .35; cursor: default; }
+  .alpha hr { border: none; border-top: 1px solid var(--line); margin: 6px 4px; }
 
-  main { max-width: 960px; margin: 0 auto; padding: 18px 20px 40px; }
+  main { flex: 1; min-width: 0; }
   .entry { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px;
     margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.03); transition: box-shadow .2s; }
   .entry:hover { box-shadow: 0 4px 14px rgba(0,0,0,.06); }
@@ -82,6 +89,12 @@
     padding: 10px 16px; border-radius: 10px; font-size: 14px; opacity: 0; pointer-events: none; transition: opacity .25s; }
   .toast.show { opacity: .95; }
 
+  @media (max-width: 760px) {
+    .layout { flex-direction: column; gap: 12px; }
+    .alpha { width: 100%; flex: none; position: static; max-height: none; display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; }
+    .alpha button { width: auto; min-width: 58px; height: 30px; padding: 0 8px; gap: 6px; }
+    .alpha hr { display: none; }
+  }
   @media (max-width: 600px) {
     .word { font-size: 19px; }
     .entry { padding: 14px; }
@@ -99,14 +112,16 @@
       <input id="q" type="search" placeholder="搜索单词、释义或派生词…" autocomplete="off">
       <button id="clear" type="button">清空</button>
     </div>
-    <div class="alpha" id="alpha"></div>
   </div>
 </header>
 
-<main>
-  <div id="list"></div>
-  <nav class="pager" id="pager"></nav>
-</main>
+<div class="layout">
+  <aside class="alpha" id="alpha" aria-label="字母索引"></aside>
+  <main>
+    <div id="list"></div>
+    <nav class="pager" id="pager"></nav>
+  </main>
+</div>
 
 <footer>点击单词或 🔊 按钮可朗读 ｜ 音标为英式（RP）｜ 发音由浏览器语音合成提供</footer>
 <div class="toast" id="toast"></div>
@@ -179,11 +194,12 @@ function filtered() {
 
 /* ---------- rendering ---------- */
 function renderAlpha() {
-  const html = [`<button data-l="all" class="${state.letter === "all" ? "active" : ""}">全部</button>`];
+  const html = [`<button data-l="all" class="${state.letter === "all" ? "active" : ""}">
+    <span class="letter">全部</span><span class="num">${DATA.length}</span></button><hr>`];
   LETTERS.forEach((l) => {
     const n = counts[l] || 0;
-    html.push(`<button data-l="${l}" ${n ? "" : "disabled"} class="${state.letter === l ? "active" : ""}"
-      title="${n} 个词">${l === "#" ? "#" : l.toUpperCase()}</button>`);
+    html.push(`<button data-l="${l}" ${n ? "" : "disabled"} class="${state.letter === l ? "active" : ""}">
+      <span class="letter">${l === "#" ? "#" : l.toUpperCase()}</span><span class="num">${n}</span></button>`);
   });
   $("alpha").innerHTML = html.join("");
 }
@@ -276,7 +292,7 @@ function loadHash() {
 
 /* ---------- events ---------- */
 function scrollTop() {
-  window.scrollTo({ top: document.querySelector("main").offsetTop - 8, behavior: "smooth" });
+  window.scrollTo({ top: document.querySelector(".layout").offsetTop - 8, behavior: "smooth" });
 }
 
 $("alpha").addEventListener("click", (e) => {
