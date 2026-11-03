@@ -100,6 +100,39 @@
     .word { font-size: 19px; }
     .entry { padding: 14px; }
   }
+
+  .tabs { display: flex; gap: 4px; margin-left: auto; }
+  .tabs button { padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper);
+    color: var(--muted); cursor: pointer; font-size: 14px; }
+  .tabs button:hover { color: var(--accent); border-color: var(--accent); }
+  .tabs button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  body.grammar .layout, body.grammar .search, body.grammar #count { display: none; }
+  #grammar { display: none; padding: 8px 0 24px; }
+  body.grammar #grammar { display: block; }
+
+  .gtoc { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 4px; }
+  .gtoc button { padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper);
+    color: var(--muted); cursor: pointer; font-size: 13px; }
+  .gtoc button:hover { color: var(--accent); border-color: var(--accent); }
+  .gsec { scroll-margin-top: calc(var(--hdr, 120px) + 16px); margin-top: 28px; }
+  .gsec > h2 { font-family: Georgia, "Noto Serif CJK SC", "Songti SC", serif; font-size: 19px; margin: 0 0 12px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--line); color: var(--accent); }
+  .gcard { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.03); }
+  .gcard h3 { margin: 0 0 6px; font-size: 16px; }
+  .gcard .gdesc { color: var(--ink); line-height: 1.75; font-size: 14.5px; margin: 0; }
+  .gcard .gtip { margin: 8px 0 0; padding: 8px 12px; background: #fbf6ec; border-left: 3px solid var(--gold);
+    border-radius: 6px; font-size: 13.5px; color: #5b4a2b; line-height: 1.7; }
+  .gex { list-style: none; margin: 10px 0 0; padding: 0; }
+  .gex li { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; border-top: 1px dashed var(--line); }
+  .gex li:first-child { border-top: none; }
+  .gex .en { flex: 1; font-size: 15px; }
+  .gex .zh { flex: 1; color: var(--muted); font-size: 14px; }
+  .gex .spk { border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 2px; opacity: .7; }
+  .gex .spk:hover { opacity: 1; }
+  @media (max-width: 600px) {
+    .gex li { flex-direction: column; gap: 2px; }
+  }
 </style>
 </head>
 <body>
@@ -108,6 +141,10 @@
     <div class="title-row">
       <h1>高中英语课标核心词汇</h1>
       <span class="count" id="count"></span>
+      <nav class="tabs" id="tabs">
+        <button type="button" data-tab="vocab" class="on">单词</button>
+        <button type="button" data-tab="grammar">语法</button>
+      </nav>
     </div>
     <div class="search">
       <input id="q" type="search" placeholder="搜索单词、释义或派生词…" autocomplete="off">
@@ -124,15 +161,18 @@
   </main>
 </div>
 
+<section id="grammar" class="wrap"></section>
+
 <footer>点击单词或 🔊 按钮可朗读 ｜ 音标为英式（RP）｜ 发音由浏览器语音合成提供</footer>
 <div class="toast" id="toast"></div>
 
 <script>
 const DATA = /*__DATA__*/;
+const GRAMMAR = /*__GRAMMAR__*/;
 const PER_PAGE = 30;
 const LETTERS = "abcdefghijklmnopqrstuvwxyz".split("").concat(["#"]);
 
-const state = { letter: "all", q: "", page: 1 };
+const state = { tab: "vocab", letter: "all", q: "", page: 1 };
 const $ = (id) => document.getElementById(id);
 
 function esc(s) {
@@ -276,20 +316,83 @@ function render() {
 /* ---------- state in URL hash ---------- */
 function saveHash() {
   const parts = [];
-  if (state.letter !== "all") parts.push("l=" + state.letter);
-  if (state.q) parts.push("q=" + encodeURIComponent(state.q));
-  if (state.page > 1) parts.push("p=" + state.page);
+  if (state.tab === "grammar") {
+    parts.push("t=g");
+  } else {
+    if (state.letter !== "all") parts.push("l=" + state.letter);
+    if (state.q) parts.push("q=" + encodeURIComponent(state.q));
+    if (state.page > 1) parts.push("p=" + state.page);
+  }
   history.replaceState(null, "", parts.length ? "#" + parts.join("&") : location.pathname + location.search);
 }
 
 function loadHash() {
   const h = location.hash.replace(/^#/, "");
-  if (!h) return;
   const p = new URLSearchParams(h);
+  state.tab = p.get("t") === "g" ? "grammar" : "vocab";
+  if (!h) return;
   if (p.get("l") && LETTERS.includes(p.get("l"))) state.letter = p.get("l");
   if (p.get("q")) { state.q = p.get("q"); $("q").value = state.q; }
   if (p.get("p")) state.page = parseInt(p.get("p"), 10) || 1;
 }
+
+/* ---------- grammar tab ---------- */
+let gramRendered = false;
+function grammarHTML(it) {
+  return `
+    <article class="gcard">
+      <h3>${esc(it.name)}</h3>
+      <p class="gdesc">${esc(it.desc)}</p>
+      ${it.tip ? `<p class="gtip">💡 ${esc(it.tip)}</p>` : ""}
+      <ul class="gex">${it.ex.map(([en, zh]) => `
+        <li>
+          <span class="en">${esc(en)}</span>
+          <span class="zh">${esc(zh)}</span>
+          <button class="spk" data-speak="${esc(en)}" title="朗读">🔊</button>
+        </li>`).join("")}</ul>
+    </article>`;
+}
+
+function renderGrammar() {
+  if (gramRendered) return;
+  const toc = GRAMMAR.map((s, i) => `<button type="button" data-sec="${i}">${esc(s.title)}</button>`).join("");
+  const body = GRAMMAR.map((s, i) => `
+    <section class="gsec" id="gs${i}">
+      <h2>${esc(s.title)}</h2>
+      ${s.items.map(grammarHTML).join("")}
+    </section>`).join("");
+  $("grammar").innerHTML = `<div class="gtoc">${toc}</div>${body}`;
+  gramRendered = true;
+}
+
+function showTab() {
+  setHeaderVar();
+  const g = state.tab === "grammar";
+  document.body.classList.toggle("grammar", g);
+  document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.tab === state.tab));
+  if (g) { renderGrammar(); saveHash(); } else render();
+}
+
+function setTab(t) {
+  state.tab = t;
+  showTab();
+  window.scrollTo(0, 0);
+}
+
+$("tabs").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-tab]");
+  if (b) setTab(b.dataset.tab);
+});
+
+$("grammar").addEventListener("click", (e) => {
+  const sec = e.target.closest("button[data-sec]");
+  if (sec) {
+    $("gs" + sec.dataset.sec).scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+  const el = e.target.closest("[data-speak]");
+  if (el) speak(el.dataset.speak, el.classList.contains("spk") ? el : null);
+});
 
 /* ---------- events ---------- */
 function scrollTop() {
@@ -343,10 +446,10 @@ $("clear").addEventListener("click", () => {
   render();
 });
 
-window.addEventListener("hashchange", () => { loadHash(); render(); });
+window.addEventListener("hashchange", () => { loadHash(); showTab(); });
 
 loadHash();
-render();
+showTab();
 </script>
 </body>
 </html>

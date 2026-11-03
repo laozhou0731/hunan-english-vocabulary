@@ -1,0 +1,187 @@
+[
+  {
+    "title": "一、动词时态",
+    "items": [
+      {
+        "name": "一般现在时",
+        "desc": "表示经常性、习惯性的动作，或客观事实与真理。结构：主语 + 动词原形（第三人称单数加 -s / -es）。",
+        "tip": "常与 always, usually, often, every day 等连用。",
+        "ex": [["She reads English every morning.", "她每天早上读英语。"], ["The earth goes around the sun.", "地球绕着太阳转。"]]
+      },
+      {
+        "name": "一般过去时",
+        "desc": "表示过去某个时间发生的动作或存在的状态。结构：动词过去式（be 动词用 was / were）。",
+        "tip": "常与 yesterday, last week, in 2008, just now 等过去时间状语连用。",
+        "ex": [["I visited my grandma last weekend.", "我上个周末去看望了奶奶。"], ["He was ill yesterday.", "他昨天生病了。"]]
+      },
+      {
+        "name": "一般将来时",
+        "desc": "表示将来要发生的动作。结构：will / shall + 动词原形；be going to + 动词原形 表示计划或有迹象的将来；be about to 表示即将发生。",
+        "ex": [["We will hold a sports meeting next month.", "我们下个月将举行运动会。"], ["It is going to rain soon.", "天快要下雨了。"]]
+      },
+      {
+        "name": "现在进行时",
+        "desc": "表示说话时正在进行的动作，也可表示最近一段时间内的动作，或按计划将要发生的安排。结构：am / is / are + doing。",
+        "ex": [["They are playing football now.", "他们现在正在踢足球。"], ["I am meeting Tom tomorrow.", "我明天要和汤姆见面。"]]
+      },
+      {
+        "name": "现在完成时",
+        "desc": "表示过去发生的动作对现在造成影响，或动作从过去持续到现在。结构：have / has + 过去分词。",
+        "tip": "常与 already, yet, just, ever, never, for, since 连用。for 后接时间段，since 后接时间点。",
+        "ex": [["I have finished my homework.", "我已经做完作业了。"], ["She has lived here for ten years.", "她在这里住了十年。"]]
+      },
+      {
+        "name": "过去完成时",
+        "desc": "表示过去某一时间或动作之前已经完成的动作。结构：had + 过去分词。",
+        "ex": [["When I arrived, the film had already started.", "我到的时候，电影已经开始了。"]]
+      },
+      {
+        "name": "现在完成进行时",
+        "desc": "强调动作从过去开始、一直持续到现在，并可能继续下去。结构：have / has been + doing。",
+        "ex": [["I have been studying for three hours.", "我已经学习三个小时了。"]]
+      }
+    ]
+  },
+  {
+    "title": "二、被动语态",
+    "items": [
+      {
+        "name": "被动语态的基本形式",
+        "desc": "主语是动作的承受者。结构：be + 过去分词（by 引出动作的执行者）。时态变化通过 be 动词体现。",
+        "ex": [["The window was broken last night.", "窗户昨晚被打破了。"], ["English is spoken in many countries.", "许多国家都说英语。"]]
+      },
+      {
+        "name": "含情态动词的被动语态",
+        "desc": "结构：情态动词 + be + 过去分词。",
+        "ex": [["The problem can be solved easily.", "这个问题很容易解决。"], ["The homework must be finished today.", "作业必须今天完成。"]]
+      }
+    ]
+  },
+  {
+    "title": "三、非谓语动词",
+    "items": [
+      {
+        "name": "不定式（to do）",
+        "desc": "可在句中作主语、宾语、宾语补足语，也可作目的状语。",
+        "ex": [["To learn English well takes time.", "学好英语需要时间。"], ["She came here to help us.", "她来这里是为了帮助我们。"]]
+      },
+      {
+        "name": "动名词（doing）",
+        "desc": "具有名词性质，可作主语、宾语、表语。常接动名词作宾语的动词有 enjoy, finish, mind, consider, suggest, practise 等。",
+        "ex": [["Reading is my favourite hobby.", "阅读是我最喜欢的爱好。"], ["She enjoys swimming in summer.", "她喜欢在夏天游泳。"]]
+      },
+      {
+        "name": "现在分词与过去分词",
+        "desc": "现在分词（doing）表示主动或进行；过去分词（done）表示被动或完成。可作定语、状语等。",
+        "ex": [["The boy running over there is my brother.", "那边跑着的男孩是我弟弟。"], ["The letter written in English was from Tom.", "那封用英语写的信是汤姆寄来的。"], ["Walking along the street, I met my teacher.", "沿着街道走的时候，我遇到了我的老师。"]]
+      },
+      {
+        "name": "stop 等动词后接 to do 与 doing 的区别",
+        "desc": "stop to do 表示停下来去做另一件事；stop doing 表示停止正在做的事。",
+        "ex": [["He stopped to smoke.", "他停下来抽烟。（停下手中的事去抽烟）"], ["He stopped smoking.", "他戒烟了。（停止抽烟）"]]
+      }
+    ]
+  },
+  {
+    "title": "四、情态动词",
+    "items": [
+      {
+        "name": "常用情态动词",
+        "desc": "can / could 表示能力或可能；may / might 表示允许或可能性；must 表示必须；should / ought to 表示建议或义务；need 表示需要。情态动词后接动词原形，没有人称和时态变化。",
+        "ex": [["You must finish it today.", "你今天必须完成它。"], ["You don't have to come.", "你不必来。"], ["You mustn't smoke here.", "你不准在这里抽烟。"]]
+      },
+      {
+        "name": "情态动词 + have done",
+        "desc": "should have done 表示本应该做而没做；needn't have done 表示本不必做却做了；must have done 表示对过去的推测。",
+        "ex": [["You should have called me.", "你本该给我打电话的。"], ["He must have forgotten it.", "他一定是忘了。"]]
+      }
+    ]
+  },
+  {
+    "title": "五、虚拟语气",
+    "items": [
+      {
+        "name": "与现在事实相反",
+        "desc": "结构：If + 主语 + 动词过去式（be 动词多用 were），主句 would / could / might + 动词原形。",
+        "ex": [["If I were you, I would take the bus.", "如果我是你，我会坐公交车。"]]
+      },
+      {
+        "name": "与过去事实相反",
+        "desc": "结构：If + 主语 + had done，主句 would / could / might + have done。",
+        "ex": [["If we had left earlier, we would have caught the train.", "如果我们早点出发，就能赶上火车了。"]]
+      },
+      {
+        "name": "wish 后的虚拟语气",
+        "desc": "wish 后的从句表示与现在或过去事实相反的愿望：表示现在用过去式，表示过去用 had done。",
+        "ex": [["I wish I knew the answer.", "我真希望我知道答案。（实际不知道）"], ["I wish I had listened to you.", "我真希望当初听了你的话。（实际没听）"]]
+      }
+    ]
+  },
+  {
+    "title": "六、从句",
+    "items": [
+      {
+        "name": "定语从句",
+        "desc": "修饰名词或代词，由关系代词 who / whom / whose / which / that 或关系副词 when / where / why 引导。",
+        "tip": "先行词指人用 who / whom / that；指物用 which / that；先行词是时间、地点用 when / where。",
+        "ex": [["The girl who is standing there is my sister.", "站在那里的女孩是我的妹妹。"], ["This is the place where we first met.", "这是我们第一次见面的地方。"]]
+      },
+      {
+        "name": "名词性从句",
+        "desc": "在句中充当主语、宾语、表语或同位语。常由 that, whether, if, what, when, who 等引导。",
+        "ex": [["What he said is true.", "他说的话是真的。（主语从句）"], ["I don't know whether he will come.", "我不知道他会不会来。（宾语从句）"], ["The question is when we'll start.", "问题是我们什么时候出发。（表语从句）"], ["The news that our team won spread quickly.", "我们队获胜的消息很快传开了。（同位语从句）"]]
+      },
+      {
+        "name": "状语从句",
+        "desc": "修饰主句的动词、形容词或副词，表示时间、条件、原因、让步、目的、结果等。",
+        "tip": "时间：when, as soon as, until；条件：if, unless；原因：because, since, as；让步：although, though；目的：so that；结果：so ... that。",
+        "ex": [["I will call you as soon as I arrive.", "我一到就给你打电话。（时间）"], ["You will fail unless you work harder.", "除非你更加努力，否则你会失败。（条件）"], ["Although it was raining, they went out.", "尽管下着雨，他们还是出去了。（让步）"]]
+      }
+    ]
+  },
+  {
+    "title": "七、倒装与强调",
+    "items": [
+      {
+        "name": "部分倒装",
+        "desc": "否定副词（never, seldom, hardly, rarely, little 等）或 only + 状语位于句首时，句子要部分倒装：助动词或情态动词提前到主语前。",
+        "ex": [["Never have I seen such a beautiful view.", "我从未见过如此美丽的景色。"], ["Hardly had I got home when it started to rain.", "我刚到家，天就开始下雨了。"], ["Only then did I understand the problem.", "直到那时我才明白这个问题。"]]
+      },
+      {
+        "name": "强调句型",
+        "desc": "结构：It is / was + 被强调部分 + that / who + 其余部分。被强调部分可以是主语、宾语或状语。去掉 It is ... that 后句子仍然完整。",
+        "ex": [["It was in 2008 that he joined the army.", "他是在2008年参军的。（强调时间）"], ["It is Tom who broke the vase.", "打碎花瓶的是汤姆。（强调主语）"]]
+      }
+    ]
+  },
+  {
+    "title": "八、主谓一致",
+    "items": [
+      {
+        "name": "常见主谓一致规则",
+        "desc": "谓语动词的人称和数要与主语一致。Neither ... nor / either ... or / not only ... but also 连接主语时，谓语与靠近它的主语一致。a number of 表示复数，the number of 表示单数。",
+        "ex": [["Neither he nor I am wrong.", "他和我都没错。"], ["A number of students are waiting outside.", "很多学生正在外面等候。"], ["The number of students is increasing.", "学生人数正在增加。"]]
+      }
+    ]
+  },
+  {
+    "title": "九、冠词、介词与比较级",
+    "items": [
+      {
+        "name": "冠词 a / an / the",
+        "desc": "a / an 表示泛指“一个”，元音音素前用 an；the 表示特指或双方都知道的人或事物，也用于世界上独一无二的事物。",
+        "ex": [["I have a pen and an eraser.", "我有一支钢笔和一块橡皮。"], ["The sun rises in the east.", "太阳从东方升起。"]]
+      },
+      {
+        "name": "时间介词 in / on / at",
+        "desc": "at 用于具体时刻；on 用于具体日期和星期；in 用于月份、季节、年份及较长的时间段。",
+        "ex": [["We have class at 8 o'clock.", "我们八点上课。"], ["I was born on May 5th.", "我出生于5月5日。"], ["She was born in 2008.", "她出生于2008年。"]]
+      },
+      {
+        "name": "形容词和副词的比较级与最高级",
+        "desc": "单音节和部分双音节词加 -er / -est；多音节词前加 more / most。少数词不规则变化，如 good–better–best，bad–worse–worst。",
+        "ex": [["This book is more interesting than that one.", "这本书比那本更有趣。"], ["He is the tallest boy in our class.", "他是我们班最高的男生。"], ["She runs as fast as her brother.", "她跑得和她哥哥一样快。"]]
+      }
+    ]
+  }
+]

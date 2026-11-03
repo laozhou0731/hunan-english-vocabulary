@@ -6,6 +6,11 @@ DATA_DIR = os.path.join(FILES, "data")
 ORDER = ["A", "B", "C", "DE", "FGH", "IJKL", "MNO", "PQR", "S", "TZ"]
 TEMPLATE = os.path.join(BASE, "template.html")
 OUT = os.path.join(BASE, "index.html")
+GRAMMAR = os.path.join(BASE, "grammar.json")
+
+
+def js_json(obj):
+    return json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 
 def letter_of(word):
@@ -42,14 +47,16 @@ def load():
 
 def main():
     data = load()
-    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-    payload = payload.replace("</", "<\\/")
+    with open(GRAMMAR, encoding="utf-8") as f:
+        grammar = json.load(f)
     with open(TEMPLATE, encoding="utf-8") as f:
         tpl = f.read()
-    if "/*__DATA__*/" not in tpl:
-        raise SystemExit("placeholder missing")
+    for ph in ("/*__DATA__*/", "/*__GRAMMAR__*/"):
+        if ph not in tpl:
+            raise SystemExit(f"placeholder missing: {ph}")
+    out = tpl.replace("/*__DATA__*/", js_json(data)).replace("/*__GRAMMAR__*/", js_json(grammar))
     with open(OUT, "w", encoding="utf-8") as f:
-        f.write(tpl.replace("/*__DATA__*/", payload))
+        f.write(out)
     print(f"{len(data)} 主词条, {sum(len(r['d']) for r in data)} 派生词 -> {OUT}")
 
 
