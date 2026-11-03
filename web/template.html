@@ -35,7 +35,8 @@
   .search button:hover { color: var(--accent); border-color: var(--accent); }
 
   .layout { max-width: 1120px; margin: 0 auto; padding: 18px 20px 40px; display: flex; gap: 24px; align-items: flex-start; }
-  .alpha { width: 150px; flex: 0 0 150px; position: sticky; top: 18px; max-height: calc(100vh - 36px); overflow-y: auto;
+  .alpha { width: 150px; flex: 0 0 150px; position: sticky; top: calc(var(--hdr, 120px) + 12px);
+    max-height: calc(100vh - var(--hdr, 120px) - 30px); overflow-y: auto;
     background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 8px; }
   .alpha button { width: 100%; display: flex; justify-content: space-between; align-items: center; height: 34px;
     padding: 0 12px; margin-bottom: 2px; border-radius: 9px; border: 1px solid transparent; background: none;
@@ -292,8 +293,16 @@ function loadHash() {
 
 /* ---------- events ---------- */
 function scrollTop() {
-  window.scrollTo({ top: document.querySelector(".layout").offsetTop - 8, behavior: "smooth" });
+  const hdr = document.querySelector("header").offsetHeight;
+  const y = $("list").getBoundingClientRect().top + window.scrollY - hdr - 16;
+  window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
 }
+
+function setHeaderVar() {
+  document.documentElement.style.setProperty("--hdr", document.querySelector("header").offsetHeight + "px");
+}
+setHeaderVar();
+window.addEventListener("resize", setHeaderVar);
 
 $("alpha").addEventListener("click", (e) => {
   const b = e.target.closest("button[data-l]");
