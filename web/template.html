@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高中英语课标核心词汇 3500</title>
+<style>
+  :root {
+    --bg: #f7f5ef;
+    --paper: #ffffff;
+    --ink: #1d2433;
+    --muted: #6b7280;
+    --line: #e5e1d6;
+    --accent: #2f4a6d;
+    --accent-soft: #e8eef6;
+    --gold: #b98b3c;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink);
+    font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(247,245,239,.94);
+    backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  .title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+    padding-top: 16px; flex-wrap: wrap; }
+  h1 { font-family: Georgia, "Noto Serif CJK SC", "Songti SC", serif; font-size: 22px; margin: 0; letter-spacing: .5px; }
+  .count { color: var(--muted); font-size: 13px; }
+  .search { margin: 12px 0; display: flex; gap: 10px; }
+  .search input { flex: 1; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--paper); font-size: 15px; outline: none; transition: border-color .2s, box-shadow .2s; }
+  .search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(47,74,109,.12); }
+  .search button { padding: 0 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper);
+    color: var(--muted); cursor: pointer; font-size: 14px; }
+  .search button:hover { color: var(--accent); border-color: var(--accent); }
+
+  .alpha { display: flex; flex-wrap: wrap; gap: 6px; padding-bottom: 14px; }
+  .alpha button { min-width: 34px; height: 32px; padding: 0 8px; border-radius: 8px; border: 1px solid var(--line);
+    background: var(--paper); color: var(--ink); cursor: pointer; font: 600 14px Georgia, serif; transition: all .15s; }
+  .alpha button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+  .alpha button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .alpha button:disabled { opacity: .3; cursor: default; }
+
+  main { max-width: 960px; margin: 0 auto; padding: 18px 20px 40px; }
+  .entry { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px;
+    margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.03); transition: box-shadow .2s; }
+  .entry:hover { box-shadow: 0 4px 14px rgba(0,0,0,.06); }
+  .head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .word { font-family: Georgia, "Times New Roman", serif; font-size: 22px; font-weight: 700; color: var(--accent);
+    cursor: pointer; }
+  .word:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .ipa { font-family: "Doulos SIL", "Lucida Sans Unicode", "DejaVu Sans", serif; color: var(--muted); font-size: 15px; }
+  .pos { font-size: 12px; color: #fff; background: var(--gold); border-radius: 6px; padding: 1px 7px; }
+  .spk { border: none; background: var(--accent-soft); color: var(--accent); width: 32px; height: 32px;
+    border-radius: 50%; cursor: pointer; font-size: 15px; display: inline-flex; align-items: center; justify-content: center;
+    transition: transform .1s, background .2s; }
+  .spk:hover { background: var(--accent); color: #fff; }
+  .spk:active { transform: scale(.92); }
+  .spk.playing { background: var(--gold); color: #fff; }
+  .meaning { margin-top: 8px; font-size: 16px; }
+  .en { margin-top: 4px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .derived { margin: 12px 0 0; padding: 10px 0 0 14px; border-left: 2px solid var(--accent-soft); list-style: none; }
+  .derived li { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 4px 0; font-size: 14px; }
+  .derived .dw { font-weight: 600; cursor: pointer; color: var(--ink); }
+  .derived .dw:hover { color: var(--accent); }
+  .derived .dpos { color: var(--gold); font-size: 12px; }
+  .derived .dzh { color: var(--ink); }
+  .derived .den { color: var(--muted); font-size: 13px; width: 100%; }
+
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+
+  nav.pager { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 18px; }
+  nav.pager button { min-width: 36px; height: 36px; padding: 0 10px; border-radius: 9px; border: 1px solid var(--line);
+    background: var(--paper); color: var(--ink); cursor: pointer; font-size: 14px; }
+  nav.pager button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+  nav.pager button.cur { background: var(--accent); border-color: var(--accent); color: #fff; }
+  nav.pager button:disabled { opacity: .35; cursor: default; }
+  nav.pager span { color: var(--muted); padding: 0 4px; }
+
+  footer { text-align: center; color: var(--muted); font-size: 12px; padding: 0 20px 30px; }
+  .toast { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff;
+    padding: 10px 16px; border-radius: 10px; font-size: 14px; opacity: 0; pointer-events: none; transition: opacity .25s; }
+  .toast.show { opacity: .95; }
+
+  @media (max-width: 600px) {
+    .word { font-size: 19px; }
+    .entry { padding: 14px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="title-row">
+      <h1>高中英语课标核心词汇</h1>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="search">
+      <input id="q" type="search" placeholder="搜索单词、释义或派生词…" autocomplete="off">
+      <button id="clear" type="button">清空</button>
+    </div>
+    <div class="alpha" id="alpha"></div>
+  </div>
+</header>
+
+<main>
+  <div id="list"></div>
+  <nav class="pager" id="pager"></nav>
+</main>
+
+<footer>点击单词或 🔊 按钮可朗读 ｜ 音标为英式（RP）｜ 发音由浏览器语音合成提供</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const DATA = /*__DATA__*/;
+const PER_PAGE = 30;
+const LETTERS = "abcdefghijklmnopqrstuvwxyz".split("").concat(["#"]);
+
+const state = { letter: "all", q: "", page: 1 };
+const $ = (id) => document.getElementById(id);
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+const counts = {};
+DATA.forEach((r) => { counts[r.l] = (counts[r.l] || 0) + 1; });
+
+/* ---------- speech ---------- */
+let voices = [];
+function loadVoices() { voices = window.speechSynthesis ? speechSynthesis.getVoices() : []; }
+if (window.speechSynthesis) {
+  loadVoices();
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function pickVoice() {
+  return voices.find((v) => /en[-_]GB/i.test(v.lang))
+    || voices.find((v) => /^en/i.test(v.lang))
+    || null;
+}
+
+let toastTimer;
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
+}
+
+function speak(text, btn) {
+  if (!window.speechSynthesis) { toast("当前浏览器不支持语音朗读"); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  const v = pickVoice();
+  if (v) u.voice = v;
+  u.lang = v ? v.lang : "en-GB";
+  u.rate = 0.9;
+  if (btn) {
+    btn.classList.add("playing");
+    u.onend = u.onerror = () => btn.classList.remove("playing");
+  }
+  speechSynthesis.speak(u);
+}
+
+/* ---------- filtering ---------- */
+function matches(r, q) {
+  if (!q) return true;
+  const hit = (s) => s && s.toLowerCase().includes(q);
+  if (hit(r.w) || hit(r.zh) || hit(r.en)) return true;
+  return r.d.some((d) => hit(d.w) || hit(d.zh) || hit(d.en));
+}
+
+function filtered() {
+  const q = state.q.trim().toLowerCase();
+  return DATA.filter((r) => (state.letter === "all" || r.l === state.letter) && matches(r, q));
+}
+
+/* ---------- rendering ---------- */
+function renderAlpha() {
+  const html = [`<button data-l="all" class="${state.letter === "all" ? "active" : ""}">全部</button>`];
+  LETTERS.forEach((l) => {
+    const n = counts[l] || 0;
+    html.push(`<button data-l="${l}" ${n ? "" : "disabled"} class="${state.letter === l ? "active" : ""}"
+      title="${n} 个词">${l === "#" ? "#" : l.toUpperCase()}</button>`);
+  });
+  $("alpha").innerHTML = html.join("");
+}
+
+function entryHTML(r) {
+  const derived = r.d.length
+    ? `<ul class="derived">${r.d.map((d) => `
+        <li>
+          <span class="dw" data-speak="${esc(d.w)}">${esc(d.w)}</span>
+          <span class="ipa">${esc(d.ipa)}</span>
+          <span class="dpos">${esc(d.pos)}</span>
+          <span class="dzh">${esc(d.zh)}</span>
+          <span class="den">${esc(d.en)}</span>
+        </li>`).join("")}</ul>`
+    : "";
+  return `
+    <article class="entry">
+      <div class="head">
+        <span class="word" data-speak="${esc(r.w)}">${esc(r.w)}</span>
+        <button class="spk" data-speak="${esc(r.w)}" title="朗读">🔊</button>
+        <span class="ipa">${esc(r.ipa)}</span>
+        <span class="pos">${esc(r.pos)}</span>
+      </div>
+      <div class="meaning">${esc(r.zh)}</div>
+      <div class="en">${esc(r.en)}</div>
+      ${derived}
+    </article>`;
+}
+
+function pageItems(cur, total) {
+  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+  const set = new Set([1, total, cur, cur - 1, cur + 1]);
+  if (cur <= 3) [2, 3, 4].forEach((x) => set.add(x));
+  if (cur >= total - 2) [total - 1, total - 2, total - 3].forEach((x) => set.add(x));
+  const pages = [...set].filter((p) => p >= 1 && p <= total).sort((a, b) => a - b);
+  const out = [];
+  pages.forEach((p, i) => {
+    if (i && p - pages[i - 1] > 1) out.push("…");
+    out.push(p);
+  });
+  return out;
+}
+
+function renderPager(total) {
+  const pages = Math.max(1, Math.ceil(total / PER_PAGE));
+  const cur = state.page;
+  if (pages <= 1) { $("pager").innerHTML = ""; return; }
+  const items = pageItems(cur, pages).map((p) =>
+    p === "…" ? `<span>…</span>` : `<button data-page="${p}" class="${p === cur ? "cur" : ""}">${p}</button>`
+  );
+  $("pager").innerHTML = `
+    <button data-page="${cur - 1}" ${cur <= 1 ? "disabled" : ""}>‹ 上一页</button>
+    ${items.join("")}
+    <button data-page="${cur + 1}" ${cur >= pages ? "disabled" : ""}>下一页 ›</button>`;
+}
+
+function render() {
+  const rows = filtered();
+  const pages = Math.max(1, Math.ceil(rows.length / PER_PAGE));
+  if (state.page > pages) state.page = pages;
+  if (state.page < 1) state.page = 1;
+
+  const start = (state.page - 1) * PER_PAGE;
+  const slice = rows.slice(start, start + PER_PAGE);
+
+  renderAlpha();
+  $("count").textContent = `共 ${rows.length} 个词条` + (state.letter !== "all" ? `（${state.letter.toUpperCase()}）` : "");
+  $("list").innerHTML = slice.length ? slice.map(entryHTML).join("") : `<div class="empty">没有找到匹配的单词</div>`;
+  renderPager(rows.length);
+  saveHash();
+}
+
+/* ---------- state in URL hash ---------- */
+function saveHash() {
+  const parts = [];
+  if (state.letter !== "all") parts.push("l=" + state.letter);
+  if (state.q) parts.push("q=" + encodeURIComponent(state.q));
+  if (state.page > 1) parts.push("p=" + state.page);
+  history.replaceState(null, "", parts.length ? "#" + parts.join("&") : location.pathname + location.search);
+}
+
+function loadHash() {
+  const h = location.hash.replace(/^#/, "");
+  if (!h) return;
+  const p = new URLSearchParams(h);
+  if (p.get("l") && LETTERS.includes(p.get("l"))) state.letter = p.get("l");
+  if (p.get("q")) { state.q = p.get("q"); $("q").value = state.q; }
+  if (p.get("p")) state.page = parseInt(p.get("p"), 10) || 1;
+}
+
+/* ---------- events ---------- */
+function scrollTop() {
+  window.scrollTo({ top: document.querySelector("main").offsetTop - 8, behavior: "smooth" });
+}
+
+$("alpha").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-l]");
+  if (!b || b.disabled) return;
+  state.letter = b.dataset.l;
+  state.page = 1;
+  render();
+  scrollTop();
+});
+
+$("pager").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-page]");
+  if (!b || b.disabled) return;
+  state.page = parseInt(b.dataset.page, 10);
+  render();
+  scrollTop();
+});
+
+$("list").addEventListener("click", (e) => {
+  const el = e.target.closest("[data-speak]");
+  if (!el) return;
+  speak(el.dataset.speak, el.classList.contains("spk") ? el : null);
+});
+
+let qTimer;
+$("q").addEventListener("input", (e) => {
+  clearTimeout(qTimer);
+  qTimer = setTimeout(() => {
+    state.q = e.target.value;
+    state.page = 1;
+    render();
+  }, 150);
+});
+$("clear").addEventListener("click", () => {
+  $("q").value = "";
+  state.q = "";
+  state.page = 1;
+  render();
+});
+
+window.addEventListener("hashchange", () => { loadHash(); render(); });
+
+loadHash();
+render();
+</script>
+</body>
+</html>
