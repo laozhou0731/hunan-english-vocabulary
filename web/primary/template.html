@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小学知识点手册：语文 · 数学 · 英语</title>
+<style>
+  :root { --bg:#f7f5f0; --card:#fff; --ink:#2b2a27; --muted:#7a766d; --accent:#2f6f5e; --line:#e4e0d6; --hdr:110px; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: "PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); line-height:1.7; }
+  header { position:sticky; top:0; z-index:10; background:rgba(247,245,240,.96); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); padding:14px 20px 0; }
+  h1 { font-size:20px; margin:0 0 10px; font-weight:600; letter-spacing:.5px; }
+  nav#tabs { display:flex; gap:8px; }
+  nav#tabs button { border:1px solid var(--line); background:var(--card); padding:8px 18px; border-radius:20px 20px 0 0; cursor:pointer; font-size:15px; color:var(--muted); }
+  nav#tabs button.on { color:#fff; background:var(--accent); border-color:var(--accent); }
+  main { max-width:960px; margin:0 auto; padding:20px; }
+  .toc { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+  .toc button { border:1px solid var(--line); background:var(--card); padding:4px 12px; border-radius:14px; cursor:pointer; font-size:13px; color:var(--accent); }
+  .chap { scroll-margin-top:calc(var(--hdr) + 16px); margin-bottom:28px; }
+  .chap h2 { font-size:18px; color:var(--accent); border-left:4px solid var(--accent); padding-left:10px; margin:0 0 12px; }
+  .item { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 18px; margin-bottom:12px; }
+  .item h3 { font-size:16px; margin:0 0 6px; }
+  .item .desc { margin:0 0 6px; white-space:pre-wrap; }
+  .item .tip { color:#9a5b1b; background:#fbf3e6; border-radius:6px; padding:6px 10px; font-size:14px; margin:6px 0; }
+  details { margin-top:8px; border-top:1px dashed var(--line); padding-top:8px; }
+  summary { cursor:pointer; color:var(--accent); font-size:14px; }
+  .ex { margin:6px 0; font-size:14.5px; }
+  .ex .q { font-weight:600; }
+  .ex .idea { color:var(--muted); }
+  .ex .ans { color:var(--ink); }
+  .hidden { display:none; }
+  @media print { header, nav, .toc { display:none; } body { background:#fff; } .item { break-inside:avoid; border:none; } details { display:block; } summary { display:none; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>小学知识点手册</h1>
+  <nav id="tabs">
+    <button data-tab="chinese" class="on">语文（人教版）</button>
+    <button data-tab="math">数学（人教版）</button>
+    <button data-tab="english">英语（外研社·三起点）</button>
+  </nav>
+</header>
+<main>
+  <div class="toc" id="toc"></div>
+  <div id="content"></div>
+</main>
+<script>
+const DATA = /*__SUBJECTS__*/;
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function itemHTML(it) {
+  const tip = it.tip ? `<div class="tip">易错提醒：${esc(it.tip)}</div>` : '';
+  const exs = (it.ex || []).map((e, i) => `
+    <details>
+      <summary>例题 ${i + 1}：${esc(e.q)}</summary>
+      <div class="ex"><div class="idea">思路：${esc(e.idea)}</div><div class="ans">解答：${esc(e.ans)}</div></div>
+    </details>`).join('');
+  return `<div class="item"><h3>${esc(it.name)}</h3><p class="desc">${esc(it.desc)}</p>${tip}${exs}</div>`;
+}
+
+function render(key) {
+  const chapters = DATA[key] || [];
+  document.getElementById('content').innerHTML = chapters.map((c, ci) =>
+    `<section class="chap" id="${key}-c${ci}"><h2>${esc(c.title)}</h2>${c.items.map(itemHTML).join('')}</section>`).join('');
+  document.getElementById('toc').innerHTML = chapters.map((c, ci) =>
+    `<button data-sec="${key}-c${ci}">${esc(c.title)}</button>`).join('');
+}
+
+function showTab(key) {
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === key));
+  render(key);
+  history.replaceState(null, '', '#' + key);
+  window.scrollTo(0, 0);
+}
+
+document.getElementById('tabs').addEventListener('click', e => {
+  const b = e.target.closest('button[data-tab]'); if (b) showTab(b.dataset.tab);
+});
+document.getElementById('toc').addEventListener('click', e => {
+  const b = e.target.closest('button[data-sec]'); if (!b) return;
+  const el = document.getElementById(b.dataset.sec);
+  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - (document.querySelector('header').offsetHeight + 12), behavior: 'smooth' });
+});
+
+const start = (location.hash || '').replace('#', '');
+showTab(DATA[start] ? start : 'chinese');
+</script>
+</body>
+</html>

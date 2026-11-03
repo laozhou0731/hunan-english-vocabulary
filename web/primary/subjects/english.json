@@ -1,0 +1,1450 @@
+[
+ {
+  "title": "三年级上册",
+  "items": [
+   {
+    "name": "字母表与字母名称",
+    "desc": "英语字母共26个，分大写 A–Z 和小写 a–z。每个字母有名称读音，如 A 读 /eɪ/，B 读 /biː/。学习时要认读字母、会按顺序说出字母，并能书写对应的大小写形式。",
+    "tip": "b 与 d、p 与 q 小写形状相近，书写和辨认时要区分开。",
+    "ex": [
+     {
+      "q": "写出小写字母 d 对应的大写字母。（中文提示：大写）",
+      "idea": "小写转大写，直接对应字母表。",
+      "ans": "答案：D。小写 d 的大写形式是 D，书写时注意 d 与 b 形状不同。"
+     },
+     {
+      "q": "Spell the word \"cat\" by reading the letter names one by one.（逐个读出字母名称拼读 cat）",
+      "idea": "每个字母读它的名称：c、a、t。",
+      "ans": "答案：C-A-T（see-ay-tee）。拼读时按字母名称读，而不是按单词发音。"
+     },
+     {
+      "q": "M 是英语字母表中的第几个字母？请用英文序数词回答。",
+      "idea": "数字母表：A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13。",
+      "ans": "答案：thirteenth（第13个）。M 是第13个字母。"
+     }
+    ]
+   },
+   {
+    "name": "问候与自我介绍",
+    "desc": "Hello / Hi 用于打招呼；Good morning 用于早上问候。I'm 是 I am 的缩写，用于介绍自己：Hi, I'm Tom. 初次见面用 Nice to meet you.，回答为 Nice to meet you, too.",
+    "tip": "I'm 中的撇号不能漏写，I'm 不能写成 Im。",
+    "ex": [
+     {
+      "q": "A: Hello! I'm Tom. B: ___（回应：很高兴认识你，也一样）",
+      "idea": "初次见面的标准应答语。",
+      "ans": "答案：Nice to meet you, too. 解析：Nice to meet you 是初次见面用语，回答时加 too 表示“也一样”。"
+     },
+     {
+      "q": "用 I'm 完成句子：Hi! ___ Lily.（我是莉莉）",
+      "idea": "I'm = I am，主语 I 对应 am 的缩写形式。",
+      "ans": "答案：I'm。完整句子为 Hi! I'm Lily."
+     },
+     {
+      "q": "写出一个对“Good morning.”的回答。",
+      "idea": "问候语有对应的回应语。",
+      "ans": "答案：Good morning. 解析：Good morning 是对早上问候的回应，也可以说 Good morning, Miss Li."
+     }
+    ]
+   },
+   {
+    "name": "颜色词汇",
+    "desc": "常用颜色词：red 红色、yellow 黄色、blue 蓝色、green 绿色、white 白色、black 黑色、orange 橙色、pink 粉色、brown 棕色。询问颜色用 What colour is it? 回答用 It's + 颜色。",
+    "tip": "colour 是英式拼写，书写时不要漏掉 u。",
+    "ex": [
+     {
+      "q": "What colour is the apple? 请回答。（苹果通常是红色）",
+      "idea": "根据常识选择苹果的颜色。",
+      "ans": "答案：It's red. 解析：问颜色用 What colour，回答用 It's + 颜色词。"
+     },
+     {
+      "q": "填空：The sky is ___.（蓝色）",
+      "idea": "天空常用蓝色描述。",
+      "ans": "答案：blue。注意 blue 的拼写。"
+     },
+     {
+      "q": "下列单词拼写正确的是哪一个？green / grean / gren",
+      "idea": "记住 green 的拼写：g-r-e-e-n。",
+      "ans": "答案：green。grean 和 gren 拼写错误。"
+     }
+    ]
+   },
+   {
+    "name": "数字 1–10",
+    "desc": "数字 one、two、three、four、five、six、seven、eight、nine、ten。询问数量用 How many ...? 回答用 There are + 数字 + 复数名词。",
+    "tip": "eight 容易漏写 gh，拼写时要完整。",
+    "ex": [
+     {
+      "q": "How many ducks are there? 图中有4只鸭子，请用英文回答。",
+      "idea": "数量回答用 There are + 数字 + 复数名词。",
+      "ans": "答案：There are four ducks. 解析：duck 的复数是 ducks，four 是4。"
+     },
+     {
+      "q": "英文 seven 对应的阿拉伯数字是多少？",
+      "idea": "记住 1–10 的写法。",
+      "ans": "答案：7。"
+     },
+     {
+      "q": "Write the English spelling of the number 8.（写出数字 8 的英文拼写）",
+      "idea": "8 的英文是 eight。",
+      "ans": "答案：eight。注意 eight 中 gh 不发音，但要写出。"
+     }
+    ]
+   },
+   {
+    "name": "What is this? / Who is this?",
+    "desc": "What is this? 问“这是什么”，回答 It's a / an + 物品名称；Who is this? 问“这是谁”，回答 This is + 人名/称谓，或 He's / She's。",
+    "tip": "It's 与 Its 不同：It's 是 It is 的缩写，Its 表示“它的”。",
+    "ex": [
+     {
+      "q": "A: What is this? B: ___（这是一支铅笔）",
+      "idea": "物品用 It's a + 名词回答。",
+      "ans": "答案：It's a pencil. 解析：pencil 是可数名词，前面加 a。"
+     },
+     {
+      "q": "Who is she? 她是我的妈妈，请回答。",
+      "idea": "女性用 She's 指代。",
+      "ans": "答案：She's my mum. 解析：She's = She is，my mum 表示“我的妈妈”。"
+     },
+     {
+      "q": "用 What 或 Who 填空：___ is that? It's my dog.（that 指的是一只狗）",
+      "idea": "问的是物品（dog 是动物，不是人），用 What。",
+      "ans": "答案：What。解析：问物品或动物用 What，问人用 Who。"
+     }
+    ]
+   },
+   {
+    "name": "元音字母 a 的发音（自然拼读）",
+    "desc": "字母 a 在开音节（a + 辅音 + e）中读字母名称音 /eɪ/，如 name、cake；在闭音节（辅音 + a + 辅音）中读短元音 /æ/，如 cat、bag、apple。",
+    "tip": "自然拼读要区分字母名称音和短音，闭音节读短音。",
+    "ex": [
+     {
+      "q": "cat、bag、apple 中的 a 读哪个音？",
+      "idea": "这三个词的 a 都在闭音节中。",
+      "ans": "答案：均读短元音 /æ/。解析：闭音节 a 发短音 /æ/。"
+     },
+     {
+      "q": "下列单词中 a 读 /eɪ/ 的是哪一个？cake / cat / hat",
+      "idea": "a 后面是 辅音+e 的结构时读长音。",
+      "ans": "答案：cake。解析：cake 为 a+k+e 结构，读 /eɪ/；cat、hat 读 /æ/。"
+     },
+     {
+      "q": "哪个单词的元音与其他两个不同？pen / bag / hat",
+      "idea": "比较各词中的元音字母发音。",
+      "ans": "答案：pen。解析：pen 中的 e 读 /e/，bag 和 hat 中的 a 读 /æ/。"
+     }
+    ]
+   },
+   {
+    "name": "一般疑问句 Is this ...? / Is that ...?",
+    "desc": "用 Is this/that ...? 询问物品或人，肯定回答 Yes, it is. 否定回答 No, it isn't. 注意 this 与 that 的区别：this 指近处，that 指远处。",
+    "tip": "it isn't 是 it is not 的缩写，不能写成 it not。",
+    "ex": [
+     {
+      "q": "Is this a ruler? 这确实是尺子，请回答。（肯定）",
+      "idea": "一般疑问句用 Is 开头，回答用 Yes, it is.",
+      "ans": "答案：Yes, it is. 解析：主语 this 对应代词 it。"
+     },
+     {
+      "q": "Is that a bag? No, ___.（这不是包，是 a book）",
+      "idea": "否定回答要说明实际是什么。",
+      "ans": "答案：it isn't。完整句子为 No, it isn't. It's a book.（isn't = is not）"
+     },
+     {
+      "q": "翻译：这是你的书吗？（your book）",
+      "idea": "疑问句把 is 提前，this 作主语。",
+      "ans": "答案：Is this your book?"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "三年级下册",
+  "items": [
+   {
+    "name": "问候语 How are you?",
+    "desc": "How are you? 问“你好吗”，回答 I'm fine, thanks. 或 I'm OK. 回答后可以反问 And you? 表示礼貌地询问对方。",
+    "tip": "How are you? 的回答不能用 Yes/No，应说明身体状况。",
+    "ex": [
+     {
+      "q": "A: Hi, Amy. How are you? B: ___（我很好，谢谢。）",
+      "idea": "回答身体状况时，用 I'm fine, thanks.",
+      "ans": "答案：I'm fine, thank you.（或 I'm fine, thanks.）解析：thank you 与 thanks 都可以。"
+     },
+     {
+      "q": "把词语排成正确的疑问句：you / are / how",
+      "idea": "疑问词 How 开头，后接 are，最后是 you。",
+      "ans": "答案：How are you? 解析：How 是疑问词，位于句首。"
+     },
+     {
+      "q": "A: How are you? B: I'm fine, thanks. ___？（补充反问：你呢？）",
+      "idea": "反问对方时用 And you?",
+      "ans": "答案：And you?（你呢？）解析：对话中用 And you? 反问对方。"
+     }
+    ]
+   },
+   {
+    "name": "询问喜好 Do you like ...?",
+    "desc": "Do you like ...? 问“你喜欢……吗？”肯定回答 Yes, I do. 否定回答 No, I don't. 其中 like 后接名词或动名词。",
+    "tip": "回答 Do you like...? 时用 do/don't，不用 does 或 is。",
+    "ex": [
+     {
+      "q": "Do you like pears?（是的，我喜欢）",
+      "idea": "人称是 you，用 do 回答。",
+      "ans": "答案：Yes, I do. 解析：助动词用 do，不用 does。"
+     },
+     {
+      "q": "Do you like dogs?（否定：不，我不喜欢）",
+      "idea": "否定形式 do not 缩写为 don't。",
+      "ans": "答案：No, I don't. 解析：don't 是 do not 的缩写。"
+     },
+     {
+      "q": "用所给词写出疑问句：you / like / bananas",
+      "idea": "一般疑问句把助动词 Do 提到句首。",
+      "ans": "答案：Do you like bananas? 解析：句末加问号，bananas 为复数。"
+     }
+    ]
+   },
+   {
+    "name": "动物词汇",
+    "desc": "常用动物词：cat 猫、dog 狗、bird 鸟、duck 鸭子、rabbit 兔子、panda 熊猫、monkey 猴子、tiger 老虎、elephant 大象、bear 熊。询问动物用 What's this? It's a ...。",
+    "tip": "elephant 拼写较长，注意 ph 组合。",
+    "ex": [
+     {
+      "q": "What's this? 图中是一只熊猫，请完成回答：It's a ___.",
+      "idea": "熊猫的英文单词为 panda。",
+      "ans": "答案：panda。"
+     },
+     {
+      "q": "写出“猴子”的英文单词。",
+      "idea": "记住 monkey 的拼写。",
+      "ans": "答案：monkey。注意 key 结尾。"
+     },
+     {
+      "q": "下列拼写正确的是哪一个？rabbit / rabit",
+      "idea": "rabbit 中有两个 b。",
+      "ans": "答案：rabbit。解析：rabit 漏写了一个 b。"
+     }
+    ]
+   },
+   {
+    "name": "食物与饮料",
+    "desc": "常见食物词：bread 面包、rice 米饭、noodles 面条、egg 鸡蛋、cake 蛋糕、apple 苹果、banana 香蕉；饮料：milk 牛奶、juice 果汁、water 水。表达想要用 I want some ...。",
+    "tip": "milk、rice、bread 为不可数名词，前面一般不加 a 或 s。",
+    "ex": [
+     {
+      "q": "Which is a drink? A. bread  B. juice",
+      "idea": "饮料是能喝的东西。",
+      "ans": "答案：B。解析：juice 是果汁，bread 是面包。"
+     },
+     {
+      "q": "翻译：我想要一些牛奶。",
+      "idea": "想要某物可用 I want some + 不可数名词。",
+      "ans": "答案：I want some milk."
+     },
+     {
+      "q": "What do you like for breakfast? I like ___.（填入：面包）",
+      "idea": "面包的英文是 bread，不可数，用 bread 不加 s。",
+      "ans": "答案：bread。完整回答为 I like bread."
+     }
+    ]
+   },
+   {
+    "name": "元音字母 e 与 i 的发音（自然拼读）",
+    "desc": "在闭音节中，字母 e 读短元音 /e/，如 red、pen、bed；字母 i 读短元音 /ɪ/，如 pig、big、bit。",
+    "tip": "自然拼读时，先判断音节是开音节还是闭音节。",
+    "ex": [
+     {
+      "q": "bed 和 bike 中，哪个单词的元音读 /e/？",
+      "idea": "bed 中 e 在闭音节中发 /e/；bike 为长元音 /aɪ/。",
+      "ans": "答案：bed。解析：bike 的 i 读字母名称音 /aɪ/。"
+     },
+     {
+      "q": "朗读 pig、big、bit，它们中的 i 发音相同吗？",
+      "idea": "三个词都是闭音节。",
+      "ans": "答案：相同，都读短元音 /ɪ/。"
+     },
+     {
+      "q": "red 与 bed 的结尾发音是否相同？",
+      "idea": "两词都以 -ed 结尾。",
+      "ans": "答案：相同，都读 /ed/，二者押韵。"
+     }
+    ]
+   },
+   {
+    "name": "形容词 big、small、long 等",
+    "desc": "形容词用来描述人或物的特征，常见：big 大的、small 小的、long 长的、short 短的、tall 高的、thin 瘦的、fat 胖的。形容词放在 be 动词后作表语，如 The cat is small.",
+    "tip": "形容词不加 s，也不随名词单复数变化。",
+    "ex": [
+     {
+      "q": "The elephant is big. 'big' 的反义词是什么？",
+      "idea": "找出意义相反的形容词。",
+      "ans": "答案：small。解析：big 与 small 互为反义词。"
+     },
+     {
+      "q": "选词填空：This is a ___ pencil.（长的 long / short）",
+      "idea": "pencil 为长的铅笔，选 long。",
+      "ans": "答案：long。"
+     },
+     {
+      "q": "翻译：那只猫很小。（cat，that 表示“那”）",
+      "idea": "The cat is small. 其中 is 与主语单数搭配。",
+      "ans": "答案：The cat is small. 或 That cat is small."
+     }
+    ]
+   },
+   {
+    "name": "祈使句 Stand up, please.",
+    "desc": "祈使句以动词原形开头，表示命令、请求或建议，主语 you 常省略。加 please 表示礼貌。否定祈使句用 Don't + 动词原形。",
+    "tip": "祈使句中不能加主语 you，动词用原形。",
+    "ex": [
+     {
+      "q": "请坐下。（sit down）",
+      "idea": "祈使句用动词原形开头，加 please 显得礼貌。",
+      "ans": "答案：Sit down, please."
+     },
+     {
+      "q": "请不要说话。（talk）",
+      "idea": "否定祈使句用 Don't + 动词原形。",
+      "ans": "答案：Don't talk."
+     },
+     {
+      "q": "Choose: ___ the door, please.（close 关门）",
+      "idea": "祈使句要用动词原形。",
+      "ans": "答案：Close。解析：祈使句动词用原形，不加 s 或 ed。"
+     }
+    ]
+   },
+   {
+    "name": "复数名词",
+    "desc": "一般名词加 -s 构成复数，如 dog → dogs；以 s、x、ch、sh 结尾的加 -es，如 box → boxes；有些词不规则，如 man → men。",
+    "tip": "不规则复数如 child → children，要单独记忆。",
+    "ex": [
+     {
+      "q": "写出 pen 的复数形式。",
+      "idea": "一般名词直接加 s。",
+      "ans": "答案：pens。"
+     },
+     {
+      "q": "写出 box 的复数形式。",
+      "idea": "以 x 结尾的名词加 -es。",
+      "ans": "答案：boxes。"
+     },
+     {
+      "q": "填空：I have two ___.（书 book）",
+      "idea": "two 后用复数名词。",
+      "ans": "答案：books。"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "四年级上册",
+  "items": [
+   {
+    "name": "家庭成员 family",
+    "desc": "常用家庭成员词：father / dad 爸爸，mother / mum 妈妈，brother 哥哥或弟弟，sister 姐姐或妹妹，grandpa 爷爷，grandma 奶奶，uncle 叔叔，aunt 阿姨。介绍家人用 This is my ...。",
+    "tip": "grandma/grandpa 指外祖父母或祖父母，要注意语境。",
+    "ex": [
+     {
+      "q": "This is my mother's mother. 她是谁？（英文词）",
+      "idea": "母亲的母亲是外婆或奶奶，此处为妈妈的妈妈。",
+      "ans": "答案：grandma（或 grandmother）。解析：妈妈的妈妈即外婆。"
+     },
+     {
+      "q": "翻译：这是我的爸爸。",
+      "idea": "This is my dad. 注意 my 的用法。",
+      "ans": "答案：This is my dad."
+     },
+     {
+      "q": "My father's brother is my ___.（叔叔）",
+      "idea": "父亲的兄弟是叔叔。",
+      "ans": "答案：uncle。"
+     }
+    ]
+   },
+   {
+    "name": "There be 句型",
+    "desc": "There is + 单数名词 / 不可数名词，表示“有……”；There are + 复数名词表示“有……”。在 there be 句型中，be 动词的单复数取决于离它最近的那个名词。",
+    "tip": "There is/are 中 be 动词与紧跟的名词一致，不与主语无关。",
+    "ex": [
+     {
+      "q": "There ___ two books on the desk.（are / is）",
+      "idea": "two books 为复数，用 are。",
+      "ans": "答案：are。"
+     },
+     {
+      "q": "翻译：桌子上有一本书。",
+      "idea": "单数用 There is a book on the desk.",
+      "ans": "答案：There is a book on the desk."
+     },
+     {
+      "q": "There is a cat and two dogs in the room. 句中 is 为什么用单数？",
+      "idea": "就近原则：is 与离它最近的 a cat 一致。",
+      "ans": "答案：因为 be 动词与离它最近的名词 a cat 保持一致，用 is。"
+     }
+    ]
+   },
+   {
+    "name": "情态动词 can",
+    "desc": "can 表示能力，后接动词原形，主语单复数都一样。肯定 I can swim. 否定 I can't swim.（can't = cannot）。一般疑问句 Can you ...? 回答用 Yes, I can. / No, I can't.",
+    "tip": "can 后面的动词要用原形，不加 s、ed 或 ing。",
+    "ex": [
+     {
+      "q": "Can you swim?（肯定回答：会）",
+      "idea": "能力用 can，肯定回答 Yes, I can.",
+      "ans": "答案：Yes, I can."
+     },
+     {
+      "q": "Can he draw?（否定回答：不会）",
+      "idea": "否定用 can't。",
+      "ans": "答案：No, he can't. 解析：can 后接动词原形 draw，不加 s。"
+     },
+     {
+      "q": "翻译：她会唱歌吗？（sing）",
+      "idea": "疑问句 can 提前，主语 she，动词原形。",
+      "ans": "答案：Can she sing?"
+     }
+    ]
+   },
+   {
+    "name": "天气词汇 weather",
+    "desc": "常见天气：sunny 晴朗的、cloudy 多云的、windy 有风的、rainy 下雨的、snowy 下雪的、hot 热的、cold 冷的、warm 温暖的、cool 凉爽的。询问天气用 What's the weather like today? 回答 It's + 天气词。",
+    "tip": "天气描述用 It's + 形容词，不要用 It has。",
+    "ex": [
+     {
+      "q": "What's the weather like today?（图片显示下雨）请回答。",
+      "idea": "下雨对应形容词 rainy。",
+      "ans": "答案：It's rainy."
+     },
+     {
+      "q": "下列单词拼写正确的是哪个？windy / windey",
+      "idea": "注意 windy 结尾是 -y。",
+      "ans": "答案：windy。"
+     },
+     {
+      "q": "hot 的反义词是什么？",
+      "idea": "hot 热的，反义是冷的。",
+      "ans": "答案：cold。"
+     }
+    ]
+   },
+   {
+    "name": "元音字母 o 与 u 的发音（自然拼读）",
+    "desc": "闭音节中，字母 o 读短元音 /ɒ/，如 hot、dog；字母 u 读短元音 /ʌ/，如 cup、bus、sun。",
+    "tip": "o 与 u 的短音在词中容易混淆，注意记忆常见单词。",
+    "ex": [
+     {
+      "q": "dog 中的 o 读哪个音？",
+      "idea": "dog 为闭音节，o 发短音。",
+      "ans": "答案：/ɒ/。"
+     },
+     {
+      "q": "下列单词中 u 读 /ʌ/ 的是哪个？cup / cake",
+      "idea": "cup 为闭音节；cake 中 a 读长音，不是 u。",
+      "ans": "答案：cup。解析：cup 中的 u 读 /ʌ/。"
+     },
+     {
+      "q": "bus 与 us 押韵吗？",
+      "idea": "比较两词结尾音。",
+      "ans": "答案：押韵，两词都读 /ʌs/。"
+     }
+    ]
+   },
+   {
+    "name": "名词所有格 's",
+    "desc": "表示“某人的东西”，在名词后加 's，如 Mike's bag 迈克的包。以 s 结尾的复数名词，只加撇号，如 the boys' room 男孩们的房间。",
+    "tip": "所有格 's 不要与 it's（it is）混淆。",
+    "ex": [
+     {
+      "q": "翻译：莉莉的帽子。（Lily）",
+      "idea": "在人名后加 's 表示所属。",
+      "ans": "答案：Lily's hat."
+     },
+     {
+      "q": "Choose: the ___ room（两个男孩的房间）。A. boy's  B. boys'",
+      "idea": "两个男孩为复数，以 s 结尾，加撇号即可。",
+      "ans": "答案：B（boys'）。"
+     },
+     {
+      "q": "Mum's bike 中的 's 表示什么？",
+      "idea": "判断 's 是所有格还是 is 的缩写。",
+      "ans": "答案：表示所有格，意为“妈妈的自行车”。"
+     }
+    ]
+   },
+   {
+    "name": "方位介词 in / on / under 等",
+    "desc": "in 在……里；on 在……上；under 在……下；near 在……附近；behind 在……后面；in front of 在……前面；between 在……之间。",
+    "tip": "in front of 是固定短语，不能简写为 infront。",
+    "ex": [
+     {
+      "q": "The cat is ___ the box.（盒子里）",
+      "idea": "盒子里用 in。",
+      "ans": "答案：in。"
+     },
+     {
+      "q": "翻译：书在桌子上。",
+      "idea": "on 表示接触面上。",
+      "ans": "答案：The book is on the desk."
+     },
+     {
+      "q": "The bag is ___ the chair.（椅子下面）",
+      "idea": "椅子下面用 under。",
+      "ans": "答案：under。"
+     }
+    ]
+   },
+   {
+    "name": "字母 a 的其他读音（a 在 ar、al 中）",
+    "desc": "字母 a 与 r 组合读 /ɑː/，如 car、park；a 与 l 组合，如 ball 中读 /ɔː/。这类组合需要整体记忆。",
+    "tip": "ar 组合读音特殊，注意与 a 短音区分。",
+    "ex": [
+     {
+      "q": "car 中的 ar 读哪个音？",
+      "idea": "ar 组合读长音 /ɑː/。",
+      "ans": "答案：/ɑː/。"
+     },
+     {
+      "q": "Which word has the sound /ɑː/? park / pen",
+      "idea": "找 ar 组合的单词。",
+      "ans": "答案：park。解析：park 中 ar 读 /ɑː/。"
+     },
+     {
+      "q": "翻译：我们在公园里玩。（play，in the park）",
+      "idea": "在……里用 in the park。",
+      "ans": "答案：We play in the park."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "四年级下册",
+  "items": [
+   {
+    "name": "服装词汇 clothes",
+    "desc": "常见服装：shirt 衬衫、skirt 裙子、dress 连衣裙、coat 外套、jacket 夹克、trousers 裤子、shoes 鞋子、socks 袜子、hat 帽子、T-shirt T恤。单数用 It's a/an ...，复数用 They're ...。",
+    "tip": "this/these 与 that/those 的单复数要对应。",
+    "ex": [
+     {
+      "q": "These are my ___.（鞋子）",
+      "idea": "shoes 为复数，用 These are。",
+      "ans": "答案：shoes。"
+     },
+     {
+      "q": "What's that? 它是一顶帽子。",
+      "idea": "单数物品用 It's a + 名词。",
+      "ans": "答案：It's a hat."
+     },
+     {
+      "q": "Choose: ___ socks are blue.（这些袜子）A. This  B. These",
+      "idea": "socks 为复数，指示代词用 These。",
+      "ans": "答案：B（These）。"
+     }
+    ]
+   },
+   {
+    "name": "时间表达 What time is it?",
+    "desc": "问时间用 What time is it? 回答 It's + 时间。整点用 o'clock，如 It's seven o'clock.；半点用 half past，如 It's half past seven.（7:30）。",
+    "tip": "half past 表示半点，不能说 half seven。",
+    "ex": [
+     {
+      "q": "What time is it? It's 7:00，请用英文回答。",
+      "idea": "整点用 o'clock。",
+      "ans": "答案：It's seven o'clock."
+     },
+     {
+      "q": "翻译：现在是7点半。",
+      "idea": "7:30 用 half past seven。",
+      "ans": "答案：It's half past seven."
+     },
+     {
+      "q": "12:00 用英文怎么说？",
+      "idea": "12 点整可以说 twelve o'clock。",
+      "ans": "答案：It's twelve o'clock. 或 It's noon.（中午）"
+     }
+    ]
+   },
+   {
+    "name": "现在进行时",
+    "desc": "表示正在进行的动作。结构：主语 + am/is/are + 动词-ing，如 I am reading. 否定在 be 后加 not；疑问把 be 提到句首，如 Are you reading?",
+    "tip": "动词 ing 形式变化：去 e 加 ing（make → making），重读闭音节双写末字母（run → running）。",
+    "ex": [
+     {
+      "q": "I ___ (read) a book now.",
+      "idea": "主语 I 用 am，read 加 ing 变为 reading。",
+      "ans": "答案：am reading。"
+     },
+     {
+      "q": "She is ___ (dance). 她正在跳舞。",
+      "idea": "dance 以不发音 e 结尾，去 e 加 ing。",
+      "ans": "答案：dancing。解析：dance 去 e 加 ing。"
+     },
+     {
+      "q": "翻译：他们正在吃午饭。（have lunch）",
+      "idea": "they 用 are；have 去 e 加 ing。",
+      "ans": "答案：They are having lunch."
+     }
+    ]
+   },
+   {
+    "name": "一般现在时（第三人称单数）",
+    "desc": "主语为 he、she、it 或单数名词时，动词要在词尾加 s 或 es。如 likes、plays；以 o、s、x、ch、sh 结尾加 es，如 goes、watches；have 变为 has。",
+    "tip": "疑问句和否定句中用 does/doesn't，动词用原形，不再加 s。",
+    "ex": [
+     {
+      "q": "She ___ (like) apples.",
+      "idea": "she 为第三人称单数，动词加 s。",
+      "ans": "答案：likes。"
+     },
+     {
+      "q": "He ___ (go) to school every day.",
+      "idea": "go 以 o 结尾，加 es。",
+      "ans": "答案：goes。"
+     },
+     {
+      "q": "Mum ___ (watch) TV every evening? 写出疑问句。",
+      "idea": "一般疑问句用 Does，动词变原形。",
+      "ans": "答案：Does Mum watch TV every evening? 解析：疑问句用 does，watch 还原。"
+     }
+    ]
+   },
+   {
+    "name": "字母组合 ee 与 ea 的发音",
+    "desc": "ee 与 ea 都可以读长元音 /iː/，如 see、tree、tea、eat、bean。",
+    "tip": "ea 有时读 /e/（bread）或 /eɪ/（break），要看具体单词。",
+    "ex": [
+     {
+      "q": "Which word has /iː/? sea / sit",
+      "idea": "sea 中 ea 读 /iː/；sit 中 i 读短音。",
+      "ans": "答案：sea。"
+     },
+     {
+      "q": "tree 中的 ee 读音是什么？",
+      "idea": "ee 组合通常读 /iː/。",
+      "ans": "答案：/iː/。"
+     },
+     {
+      "q": "green 与 bean 中的元音是否相同？",
+      "idea": "分别看 ee 与 ea 的读音。",
+      "ans": "答案：相同，都读 /iː/。"
+     }
+    ]
+   },
+   {
+    "name": "形容词比较级",
+    "desc": "比较两者时用比较级：短形容词加 er，如 taller；以 e 结尾加 r，如 nicer；辅音字母加 y 结尾，变 y 为 i 再加 er，如 heavier（heavy）；比较时用 than 连接，如 bigger than。",
+    "tip": "比较级后面要用 than，不用 to。",
+    "ex": [
+     {
+      "q": "The dog is ___ (big) than the cat.",
+      "idea": "big 是单音节词，结尾是“辅音+元音+辅音”，双写末字母再加 er。",
+      "ans": "答案：bigger。解析：big 双写 g 再加 er，比较句中用 than。"
+     },
+     {
+      "q": "写出 nice 的比较级。",
+      "idea": "以 e 结尾，直接加 r。",
+      "ans": "答案：nicer。"
+     },
+     {
+      "q": "翻译：我比你高。（tall）",
+      "idea": "比较句用 taller than。",
+      "ans": "答案：I'm taller than you."
+     }
+    ]
+   },
+   {
+    "name": "购物询价 How much ...?",
+    "desc": "How much is it? 问价格，回答 It's + 数字 + yuan。复数名词问价格用 How much are these ...? 回答 They're ...。",
+    "tip": "价格问句要按 is/are 区分单复数。",
+    "ex": [
+     {
+      "q": "How much is the T-shirt? 它是 50 元。",
+      "idea": "单数用 is，回答用 It's fifty yuan.",
+      "ans": "答案：It's fifty yuan."
+     },
+     {
+      "q": "Ask the price of these shoes.（这些鞋子多少钱）",
+      "idea": "shoes 为复数，用 are。",
+      "ans": "答案：How much are these shoes?"
+     },
+     {
+      "q": "Choose: How much ___ these socks?（A. is  B. are）",
+      "idea": "socks 复数，用 are。",
+      "ans": "答案：B（are）。"
+     }
+    ]
+   },
+   {
+    "name": "字母组合 oo 与 ou 的发音",
+    "desc": "oo 有两种读音：book 中读 /ʊ/，moon 中读 /uː/；ou 常读 /aʊ/，如 house、mouth。",
+    "tip": "oo 与 ou 的读音要结合单词整体记忆。",
+    "ex": [
+     {
+      "q": "moon 中 oo 读哪个音？",
+      "idea": "moon 的 oo 为长音。",
+      "ans": "答案：/uː/。"
+     },
+     {
+      "q": "book 中 oo 读哪个音？",
+      "idea": "book 的 oo 为短音。",
+      "ans": "答案：/ʊ/。"
+     },
+     {
+      "q": "Which word has /aʊ/? house / hose",
+      "idea": "找 ou 组合，hose 为 o 加 e 结构。",
+      "ans": "答案：house（ou 读 /aʊ/）。"
+     }
+    ]
+   },
+   {
+    "name": "语境理解与简单短文填空",
+    "desc": "阅读短文时，先看题目和选项，再找关键词，根据上下文选出正确答案。填入时注意时态、单复数和词性。",
+    "tip": "做填空题时，时态标志词（如 yesterday、every day）很关键。",
+    "ex": [
+     {
+      "q": "Fill in: Yesterday I ___ (go) to the park.",
+      "idea": "yesterday 提示过去时，需要用过去式。",
+      "ans": "答案：went（go 的过去式）。"
+     },
+     {
+      "q": "Fill in: My father ___ a doctor.（is/are）",
+      "idea": "主语 my father 为单数。",
+      "ans": "答案：is。"
+     },
+     {
+      "q": "Read: 'I have breakfast at 7:00.' What time do I have breakfast?",
+      "idea": "从句子中找到时间。",
+      "ans": "答案：7:00。"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "五年级上册",
+  "items": [
+   {
+    "name": "学科名称 school subjects",
+    "desc": "常见学科：English 英语、Chinese 语文、maths 数学、science 科学、music 音乐、art 美术、PE 体育、computer 计算机。询问喜好用 What subject do you like? 回答 I like ...。",
+    "tip": "maths 是英式拼写，美式英语用 math。",
+    "ex": [
+     {
+      "q": "What subject do you like? 我喜欢音乐。",
+      "idea": "music 为音乐。",
+      "ans": "答案：I like music."
+     },
+     {
+      "q": "写出“科学”的英文单词。",
+      "idea": "记住 science 的拼写。",
+      "ans": "答案：science。"
+     },
+     {
+      "q": "“数学”的英文通常写成什么？",
+      "idea": "maths 是英式写法，math 是美式写法。",
+      "ans": "答案：maths（或 math）。"
+     }
+    ]
+   },
+   {
+    "name": "星期 days of the week",
+    "desc": "星期：Monday、Tuesday、Wednesday、Thursday、Friday、Saturday、Sunday。问今天星期几用 What day is it today? 回答 It's + 星期。星期名称首字母大写。",
+    "tip": "星期名称首字母要大写，不能写成 monday。",
+    "ex": [
+     {
+      "q": "What day is it today? 今天是星期二。",
+      "idea": "星期二是 Tuesday。",
+      "ans": "答案：It's Tuesday."
+     },
+     {
+      "q": "Spell 'Wednesday'.（拼写星期三）",
+      "idea": "注意 Wed-nes-day 的拼写。",
+      "ans": "答案：Wednesday。"
+     },
+     {
+      "q": "Friday 之后是星期几？",
+      "idea": "按一周顺序排列。",
+      "ans": "答案：Saturday。"
+     }
+    ]
+   },
+   {
+    "name": "一般现在时 与 时间状语",
+    "desc": "一般现在时表示经常性或习惯性动作。在句中常用 every day、on Sundays、usually 等时间词。一般疑问句用 Do/Does 提问。",
+    "tip": "一般疑问句中动词用原形，不要加 s。",
+    "ex": [
+     {
+      "q": "What do you do on Sundays? （我经常在星期日踢足球）",
+      "idea": "主语 I 用原形动词，名词 football 前不加冠词。",
+      "ans": "答案：I play football on Sundays."
+     },
+     {
+      "q": "Does Lily ___ (like) music?",
+      "idea": "主语 Lily 为第三人称单数，疑问句用 does，动词用原形。",
+      "ans": "答案：like。解析：Does Lily like music?"
+     },
+     {
+      "q": "Do you have an English class on Mondays? 写出肯定回答。",
+      "idea": "主语 you 用 do 回答。",
+      "ans": "答案：Yes, I do."
+     }
+    ]
+   },
+   {
+    "name": "祈使句与 Let's",
+    "desc": "祈使句以动词原形开头，表示命令、请求。否定为 Don't + 动词原形。Let's + 动词原形 表示“让我们……吧”。",
+    "tip": "Let's 表示建议，回答时可用 OK 或 Good idea。",
+    "ex": [
+     {
+      "q": "翻译：请不要在教室里大声说话。（in the classroom, loudly）",
+      "idea": "否定祈使句用 Don't，加动词原形。",
+      "ans": "答案：Don't talk loudly in the classroom."
+     },
+     {
+      "q": "翻译：让我们去公园吧。",
+      "idea": "Let's 后接动词原形 go。",
+      "ans": "答案：Let's go to the park."
+     },
+     {
+      "q": "把 Close the door. 改为否定句。",
+      "idea": "否定祈使句在句首加 Don't。",
+      "ans": "答案：Don't close the door."
+     }
+    ]
+   },
+   {
+    "name": "字母组合 ai 与 ay 的发音",
+    "desc": "ai 常在单词中间读 /eɪ/，如 rain、train；ay 常在单词末尾读 /eɪ/，如 day、play、today。",
+    "tip": "ai 多在词中，ay 多在词尾，这是常见规律。",
+    "ex": [
+     {
+      "q": "Which word has 'ai'? boat / train",
+      "idea": "找出含 ai 组合的单词。",
+      "ans": "答案：train。"
+     },
+     {
+      "q": "rain、day、play 中的元音音是否相同？",
+      "idea": "比较 ai、ay 的读音。",
+      "ans": "答案：相同，都读 /eɪ/。"
+     },
+     {
+      "q": "today 中 ay 读哪个音？",
+      "idea": "ay 位于词尾，读 /eɪ/。",
+      "ans": "答案：/eɪ/。"
+     }
+    ]
+   },
+   {
+    "name": "一般过去时 be 动词 was / were",
+    "desc": "表示过去的状态，用 was 或 were。I、he、she、it 或单数名词用 was；you、we、they 或复数用 were。否定为 wasn't / weren't。",
+    "tip": "was 与 were 要根据主语的单复数选择。",
+    "ex": [
+     {
+      "q": "Yesterday I ___ (be) at home.",
+      "idea": "I 与 yesterday 搭配，用过去式 was。",
+      "ans": "答案：was。"
+     },
+     {
+      "q": "They ___ (be) at school yesterday.",
+      "idea": "they 为复数，用 were。",
+      "ans": "答案：were。"
+     },
+     {
+      "q": "翻译：昨天他很忙。（busy）",
+      "idea": "主语 he 用 was。",
+      "ans": "答案：He was busy yesterday."
+     }
+    ]
+   },
+   {
+    "name": "阅读理解与简单短文",
+    "desc": "阅读时先读题目，再回到原文找关键词。注意题目中的时间、地点、人物等信息，并在原文中找到对应句子作答。",
+    "tip": "阅读回答要用原文关键信息，不要照搬题目内容。",
+    "ex": [
+     {
+      "q": "阅读：'I get up at 7:00. I have breakfast at 7:30.' 问：What time does the writer have breakfast?",
+      "idea": "找 breakfast 相关句子。",
+      "ans": "答案：7:30。"
+     },
+     {
+      "q": "阅读：'My mum is a teacher.' 问：What is Mum's job?",
+      "idea": "Mum's job 对应句子中的 a teacher。",
+      "ans": "答案：A teacher（老师）。"
+     },
+     {
+      "q": "阅读：'We play basketball on Sundays.' 问：What do they do on Sundays?",
+      "idea": "根据 on Sundays 找答案。",
+      "ans": "答案：They play basketball."
+     }
+    ]
+   },
+   {
+    "name": "写话格式（日记/自我介绍）",
+    "desc": "简单写话通常包括标题、时间和正文。日记需写日期；自我介绍按照 My name is ...，I'm ... years old. 等句子逐句写。",
+    "tip": "句子排序要注意上下文逻辑顺序。",
+    "ex": [
+     {
+      "q": "写出日记的开头格式（日期 Monday, 3rd November）。",
+      "idea": "日记一般先写日期，再写正文。",
+      "ans": "答案：Monday, 3rd November（或 Monday, November 3rd）。"
+     },
+     {
+      "q": "用一句话介绍自己的年龄（10岁）。",
+      "idea": "I'm ... years old.",
+      "ans": "答案：I'm ten years old."
+     },
+     {
+      "q": "句子排序：a) Hello, I'm Tom. b) Nice to meet you. c) I like music. 请排序。",
+      "idea": "先打招呼介绍，再表达喜好，最后结束。",
+      "ans": "答案：a, c, b。解析：问候和自我介绍在前，喜好其次，见面语放在结尾更自然。"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "五年级下册",
+  "items": [
+   {
+    "name": "一般过去时（实义动词）",
+    "desc": "表示过去发生的动作。规则动词加 -ed，如 played、cleaned；不规则动词需记忆，如 went、ate、saw、had。否定用 didn't + 动词原形；疑问用 Did + 主语 + 动词原形。",
+    "tip": "did 之后动词用原形，不能写 did went 或 did played。",
+    "ex": [
+     {
+      "q": "Yesterday I ___ (go) to the zoo.",
+      "idea": "go 的过去式为 went。",
+      "ans": "答案：went。"
+     },
+     {
+      "q": "Did you play football yesterday? 肯定回答。",
+      "idea": "一般疑问句用 did 回答。",
+      "ans": "答案：Yes, I did."
+     },
+     {
+      "q": "He ___ (not/like) cake yesterday. 写出否定句。",
+      "idea": "否定用 didn't + 动词原形。",
+      "ans": "答案：didn't like。完整句为 He didn't like cake yesterday."
+     }
+    ]
+   },
+   {
+    "name": "月份与日期",
+    "desc": "月份：January 一月、February 二月、March 三月、April 四月、May 五月、June 六月、July 七月、August 八月、September 九月、October 十月、November 十一月、December 十二月。日期用 on + 月份 + 序数词，如 on May 1st。",
+    "tip": "序数词 1st、2nd、3rd 的拼写要正确，不能写成 1th。",
+    "ex": [
+     {
+      "q": "Which month is after March? 三月之后是哪个月？",
+      "idea": "三月的下一个月是四月。",
+      "ans": "答案：April。"
+     },
+     {
+      "q": "我的生日在五月一日。（用 on）",
+      "idea": "月份在前，日期用序数词 1st。",
+      "ans": "答案：My birthday is on May 1st."
+     },
+     {
+      "q": "When is Children's Day? 儿童节在几月几日？（6月1日）",
+      "idea": "日期用 on + 月份 + 序数词。",
+      "ans": "答案：It's on June 1st."
+     }
+    ]
+   },
+   {
+    "name": "be going to 表示计划",
+    "desc": "be going to + 动词原形，表示计划或打算做某事。主语与 be 动词对应：I am going to、He is going to、They are going to。",
+    "tip": "不要漏掉 be 动词，going to 后面要用动词原形。",
+    "ex": [
+     {
+      "q": "I'm going to ___ (visit) Beijing next week.",
+      "idea": "be going to 后接动词原形。",
+      "ans": "答案：visit。"
+     },
+     {
+      "q": "She is going to ___ (buy) a bike.",
+      "idea": "be going to 后用动词原形 buy。",
+      "ans": "答案：buy。"
+     },
+     {
+      "q": "翻译：我们打算去爬山。（climb the mountain）",
+      "idea": "主语 we 用 are going to。",
+      "ans": "答案：We are going to climb the mountain."
+     }
+    ]
+   },
+   {
+    "name": "Would you like ...?",
+    "desc": "Would you like ...? 表示“你想要……吗？”，肯定回答 Yes, please. 否定回答 No, thanks. 名词前加 some 或 a/an。",
+    "tip": "Would you like 中 like 不加 s，也不用 do 引导。",
+    "ex": [
+     {
+      "q": "Would you like some tea? 肯定回答（谢谢）。",
+      "idea": "接受邀请用 Yes, please.",
+      "ans": "答案：Yes, please."
+     },
+     {
+      "q": "Would you like a banana? 否定回答（谢谢）。",
+      "idea": "婉拒用 No, thanks.",
+      "ans": "答案：No, thanks."
+     },
+     {
+      "q": "翻译：你想要一块蛋糕吗？（a piece of cake）",
+      "idea": "Would you like + 名词 + ?",
+      "ans": "答案：Would you like a piece of cake?"
+     }
+    ]
+   },
+   {
+    "name": "字母组合 ow 与 oo 的发音",
+    "desc": "ow 读 /aʊ/（cow、how）或 /əʊ/（snow、yellow）；oo 读 /ʊ/（book、look）或 /uː/（moon、food）。",
+    "tip": "ow 与 oo 都有两种读音，需结合具体单词记忆。",
+    "ex": [
+     {
+      "q": "moon 中 oo 读哪个音？",
+      "idea": "moon 为长元音组合。",
+      "ans": "答案：/uː/。"
+     },
+     {
+      "q": "book 中 oo 读哪个音？",
+      "idea": "book 为短元音组合。",
+      "ans": "答案：/ʊ/。"
+     },
+     {
+      "q": "cow 中 ow 读 /aʊ/，那 snow 中 ow 读哪个音？",
+      "idea": "snow 的 ow 读 /əʊ/。",
+      "ans": "答案：/əʊ/。"
+     }
+    ]
+   },
+   {
+    "name": "形容词比较级（较长形容词）",
+    "desc": "形容词比较级：单音节加 er；以 e 结尾加 r；多音节或较长形容词在前加 more，如 more interesting。比较用 than 连接。",
+    "tip": "单音节形容词以辅音结尾时，直接加 er 即可，如 thick → thicker（不要双写 k）。",
+    "ex": [
+     {
+      "q": "This blue bag is ___ (heavy) than the red one.",
+      "idea": "heavy 以 y 结尾，变 y 为 i 再加 er。",
+      "ans": "答案：heavier。"
+     },
+     {
+      "q": "Math is ___ (interesting) than music?（用 more 构成）",
+      "idea": "interesting 为较长词，用 more + 形容词。",
+      "ans": "答案：more interesting。完整句为 Math is more interesting than music."
+     },
+     {
+      "q": "翻译：这本书比那本厚。（thick）",
+      "idea": "thick 为单音节词，直接加 er。",
+      "ans": "答案：This book is thicker than that one."
+     }
+    ]
+   },
+   {
+    "name": "一般过去时与短文填空",
+    "desc": "填空题要根据上下文判断时态、词性和单复数。一般过去时常用 yesterday、last week、ago 等时间词。",
+    "tip": "不规则动词过去式要单独记忆，如 see → saw、eat → ate。",
+    "ex": [
+     {
+      "q": "Yesterday we ___ (play) basketball in the park.",
+      "idea": "yesterday 提示用过去时，play 为规则动词。",
+      "ans": "答案：played。"
+     },
+     {
+      "q": "Last week my family ___ (visit) my grandma.",
+      "idea": "visit 为规则动词，加 ed。",
+      "ans": "答案：visited。"
+     },
+     {
+      "q": "I ___ (see) a film last Sunday.",
+      "idea": "see 的过去式为不规则形式 saw。",
+      "ans": "答案：saw。"
+     }
+    ]
+   },
+   {
+    "name": "句型转换与语法综合",
+    "desc": "句型转换常见有：肯定句变否定句、陈述句变疑问句、一般疑问句变肯定或否定回答。转换时注意时态和助动词。",
+    "tip": "过去时否定句中动词要还原为原形。",
+    "ex": [
+     {
+      "q": "把 I like apples. 改为一般疑问句。",
+      "idea": "陈述句变疑问句，加 Do 并改 I 为 you。",
+      "ans": "答案：Do you like apples?"
+     },
+     {
+      "q": "把 She went to school. 改为否定句。",
+      "idea": "一般过去时否定用 didn't + 动词原形。",
+      "ans": "答案：She didn't go to school."
+     },
+     {
+      "q": "把 They are playing football. 改为否定句。",
+      "idea": "现在进行时否定在 be 后加 not。",
+      "ans": "答案：They aren't playing football."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "六年级上册",
+  "items": [
+   {
+    "name": "身体部位 body parts",
+    "desc": "常见身体部位：head 头、face 脸、eye 眼睛、ear 耳朵、nose 鼻子、mouth 嘴巴、arm 手臂、hand 手、leg 腿、foot 脚、neck 脖子、shoulder 肩膀。",
+    "tip": "身体部位的复数要注意：foot → feet，tooth → teeth。",
+    "ex": [
+     {
+      "q": "Spell the word 'shoulder'.（拼写肩膀）",
+      "idea": "注意 ou 组合与 ld 结尾。",
+      "ans": "答案：shoulder。"
+     },
+     {
+      "q": "翻译：我有两只眼睛。",
+      "idea": "eye 复数是 eyes。",
+      "ans": "答案：I have two eyes."
+     },
+     {
+      "q": "How many hands do you have? 请回答。",
+      "idea": "一个人有两只手。",
+      "ans": "答案：I have two hands."
+     }
+    ]
+   },
+   {
+    "name": "动词 have / has",
+    "desc": "have 表示“有”。主语为 I、you、we、they 时用 have；主语为 he、she、it 或单数名词时用 has。否定用 don't/doesn't have，疑问用 Do/Does ... have?",
+    "tip": "have 与 has 的选择取决于主语，不是看时间。",
+    "ex": [
+     {
+      "q": "She ___ (have) long hair.",
+      "idea": "she 为第三人称单数，用 has。",
+      "ans": "答案：has。"
+     },
+     {
+      "q": "Do you have a pen? 否定回答。",
+      "idea": "否定用 don't。",
+      "ans": "答案：No, I don't."
+     },
+     {
+      "q": "翻译：他有一个大鼻子。",
+      "idea": "he 用 has，a big nose。",
+      "ans": "答案：He has a big nose."
+     }
+    ]
+   },
+   {
+    "name": "感叹句 What a ... ! / How ... !",
+    "desc": "What + a/an + 形容词 + 名词！表示强烈感情，如 What a nice day!；How + 形容词 / 副词！如 How beautiful!。What 后有名词，How 后直接跟形容词或副词。",
+    "tip": "What 后要有名词，How 后不接名词。",
+    "ex": [
+     {
+      "q": "这张图片多漂亮！（picture）",
+      "idea": "picture 是名词，用 What a + 形容词 + 名词。",
+      "ans": "答案：What a beautiful picture!"
+     },
+     {
+      "q": "Rewrite: The girl is very kind. 用 How 改写为感叹句。",
+      "idea": "形容词 kind 放在 How 后，并把主语放在句末。",
+      "ans": "答案：How kind the girl is!"
+     },
+     {
+      "q": "Fill in: ___ a big elephant!（用 What 或 How）",
+      "idea": "elephant 为名词，用 What。",
+      "ans": "答案：What。完整句为 What a big elephant!"
+     }
+    ]
+   },
+   {
+    "name": "形容词最高级",
+    "desc": "最高级用于三者或三者以上的比较。短形容词在词尾加 est，前加 the，如 the tallest；长形容词前用 the most，如 the most interesting。",
+    "tip": "最高级前一定要加 the。",
+    "ex": [
+     {
+      "q": "Mount Everest is ___ (high) mountain in the world.",
+      "idea": "high 以 h 结尾，加 st 构成最高级。",
+      "ans": "答案：the highest。"
+     },
+     {
+      "q": "Xiao Ming is ___ (tall) in our class.",
+      "idea": "tall 为短形容词，加 est。",
+      "ans": "答案：the tallest。"
+     },
+     {
+      "q": "翻译：这是最有趣的书。",
+      "idea": "interesting 是长形容词，用 the most。",
+      "ans": "答案：This is the most interesting book."
+     }
+    ]
+   },
+   {
+    "name": "字母组合 ch 与 sh 的发音",
+    "desc": "ch 读 /tʃ/，如 chair、teacher、child；sh 读 /ʃ/，如 she、shop、ship。",
+    "tip": "ch 与 sh 容易混淆，注意区分舌尖位置。",
+    "ex": [
+     {
+      "q": "Which word has /ʃ/? chair / shop",
+      "idea": "sh 组合读 /ʃ/。",
+      "ans": "答案：shop。"
+     },
+     {
+      "q": "teacher 中 ch 读哪个音？",
+      "idea": "ch 在词中读 /tʃ/。",
+      "ans": "答案：/tʃ/。"
+     },
+     {
+      "q": "ship 与 sheep 中的 sh 是否发音相同？",
+      "idea": "两者都是 sh 组合。",
+      "ans": "答案：相同，都读 /ʃ/。"
+     }
+    ]
+   },
+   {
+    "name": "一般将来时 will",
+    "desc": "will + 动词原形，表示将来会发生的动作或预测。否定为 won't；疑问为 Will + 主语 + 动词原形? 常与 tomorrow、next week 等时间词连用。",
+    "tip": "will 后动词不加 s、ed 或 ing。",
+    "ex": [
+     {
+      "q": "It ___ (be) sunny tomorrow.",
+      "idea": "will + 动词原形 be。",
+      "ans": "答案：will be。"
+     },
+     {
+      "q": "I won't ___ (go) to school tomorrow.",
+      "idea": "won't 后用动词原形 go。",
+      "ans": "答案：go。"
+     },
+     {
+      "q": "翻译：你下周会来吗？（come）",
+      "idea": "一般疑问句把 will 提到句首。",
+      "ans": "答案：Will you come next week?"
+     }
+    ]
+   },
+   {
+    "name": "对话排序",
+    "desc": "对话排序时，先看问候语和开头，再看回应与结尾。逻辑上，打招呼在前，提问在中间，结束语在最后。",
+    "tip": "排序题关注问答对应关系。",
+    "ex": [
+     {
+      "q": "Put in order: 1) Thank you. 2) Here is your book. 3) Hi, Amy. 4) You're welcome.",
+      "idea": "问候在前，给书，然后道谢，最后回应。",
+      "ans": "答案：3, 2, 1, 4。"
+     },
+     {
+      "q": "Put in order: a) Bye! b) Good, I'm fine. c) How are you?",
+      "idea": "问候后是提问，接着回答，最后告别。",
+      "ans": "答案：c, b, a。"
+     },
+     {
+      "q": "Put in order: a) Yes, I do. b) Do you like music? c) Me too!",
+      "idea": "先问，再答，最后表达一致的看法。",
+      "ans": "答案：b, a, c。"
+     }
+    ]
+   },
+   {
+    "name": "询问和表达能力（can 与 be able to）",
+    "desc": "can 表示能力，主语单复数相同；be able to 也表示能力，但需随主语变化，如 am able to、is able to。",
+    "tip": "can 没有人称变化，be able to 中 be 要随主语变化。",
+    "ex": [
+     {
+      "q": "Can you ride a bike? 肯定回答。",
+      "idea": "能力用 can，肯定回答 Yes, I can.",
+      "ans": "答案：Yes, I can."
+     },
+     {
+      "q": "翻译：她会游泳。（swim）",
+      "idea": "she 为第三人称单数，can 不变化。",
+      "ans": "答案：She can swim."
+     },
+     {
+      "q": "She ___ able to dance well.（is/are）",
+      "idea": "be able to 中 be 随主语变化，she 用 is。",
+      "ans": "答案：is。"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "六年级下册",
+  "items": [
+   {
+    "name": "be going to 与 will 的区别",
+    "desc": "be going to 表示已经计划好或根据迹象即将发生的事；will 表示预测或临时决定。如 It's going to rain.（有迹象）与 I think it will be sunny.（预测）。",
+    "tip": "be going to 后接动词原形，不要漏掉 be 动词。",
+    "ex": [
+     {
+      "q": "Look at the dark clouds! It ___ rain.（going to）",
+      "idea": "根据迹象判断，用 be going to，主语 it 用 is。",
+      "ans": "答案：is going to。"
+     },
+     {
+      "q": "I think it ___ be sunny tomorrow.（will）",
+      "idea": "I think 后常接 will 表示预测。",
+      "ans": "答案：will。"
+     },
+     {
+      "q": "翻译：我打算下周去北京。（Beijing）",
+      "idea": "计划用 be going to。",
+      "ans": "答案：I'm going to Beijing next week."
+     }
+    ]
+   },
+   {
+    "name": "一般过去时（不规则动词）",
+    "desc": "常见不规则动词过去式：go→went、see→saw、eat→ate、take→took、have→had、get→got、make→made、write→wrote、come→came。一般疑问句用 Did，否定用 didn't。",
+    "tip": "did 后动词用原形，不要写 did went。",
+    "ex": [
+     {
+      "q": "Last Sunday we ___ (go) to the zoo.",
+      "idea": "go 的过去式为 went。",
+      "ans": "答案：went。"
+     },
+     {
+      "q": "Did she ___ (see) the film?",
+      "idea": "疑问句中 did 后用动词原形。",
+      "ans": "答案：see。"
+     },
+     {
+      "q": "I ___ (have) a cold last week.",
+      "idea": "have 的过去式为 had。",
+      "ans": "答案：had。"
+     }
+    ]
+   },
+   {
+    "name": "形容词比较级与最高级（不规则）",
+    "desc": "good → better → the best；bad → worse → the worst；many/much → more → the most。这些是不规则变化，需要单独记忆。",
+    "tip": "better、best 不能写成 gooder、goodest。",
+    "ex": [
+     {
+      "q": "This book is ___ (good) than that one.",
+      "idea": "good 的比较级为 better。",
+      "ans": "答案：better。"
+     },
+     {
+      "q": "My score is good, but Tom's score is ___ (bad) than mine.（用比较级填空）",
+      "idea": "bad 的比较级为 worse，句中有 than，用比较级。",
+      "ans": "答案：worse。解析：bad → worse → the worst，比较级用 worse。"
+     },
+     {
+      "q": "翻译：他是最好的学生。",
+      "idea": "good 的最高级为 the best。",
+      "ans": "答案：He is the best student."
+     }
+    ]
+   },
+   {
+    "name": "语音语调（升调与降调）",
+    "desc": "一般疑问句（Do you...?）句末用升调；特殊疑问句（What's your name?）句末用降调；陈述句句末用降调；列举时前面的项用升调，最后一项降调。",
+    "tip": "语调要和句子类型对应，朗读时注意停顿与重音。",
+    "ex": [
+     {
+      "q": "Do you like apples? 句末用什么语调？",
+      "idea": "一般疑问句用升调。",
+      "ans": "答案：升调（↗）。"
+     },
+     {
+      "q": "What's your name? 句末用什么语调？",
+      "idea": "特殊疑问句用降调。",
+      "ans": "答案：降调（↘）。"
+     },
+     {
+      "q": "I like pears, bananas and apples. 列举时语调如何？",
+      "idea": "列举时前面的名词用升调，最后一项用降调。",
+      "ans": "答案：pears 和 bananas 用升调，apples 用降调。"
+     }
+    ]
+   },
+   {
+    "name": "书信与写话格式",
+    "desc": "书信一般包括：日期、称呼（Dear ...,）、正文、结束语（Love, / Yours,）和署名。给朋友写信结束语常用 Love,；给长辈或不太熟悉的人用 Yours,。",
+    "tip": "称呼后用逗号，结束语后也要有逗号。",
+    "ex": [
+     {
+      "q": "给朋友 Lucy 写信，称呼用什么？",
+      "idea": "称呼用 Dear 加人名，后加逗号。",
+      "ans": "答案：Dear Lucy,"
+     },
+     {
+      "q": "给朋友写信的结束语用 Love 还是 Yours？",
+      "idea": "朋友之间用 Love。",
+      "ans": "答案：Love,（亲爱的/爱你的）。"
+     },
+     {
+      "q": "写出一句书信正文开头：我正在给你写信。",
+      "idea": "I'm writing to you. 表示“我正在给你写信”。",
+      "ans": "答案：I'm writing to you."
+     }
+    ]
+   },
+   {
+    "name": "阅读理解",
+    "desc": "阅读理解先看问题，再在文中找关键词（如时间、人物、事件），并用原文信息回答。注意同义替换：问题中的词可能在文中换成别的词。",
+    "tip": "回答要简洁，直接用原文关键信息。",
+    "ex": [
+     {
+      "q": "Passage: 'Tom gets up at 6:30 every day.' Q: What time does Tom get up?",
+      "idea": "问时间，找 gets up 对应的句子。",
+      "ans": "答案：6:30。"
+     },
+     {
+      "q": "Passage: 'Lily likes drawing and singing.' Q: What does Lily like?",
+      "idea": "找 likes 后面的内容。",
+      "ans": "答案：drawing and singing（画画和唱歌）。"
+     },
+     {
+      "q": "Passage: 'My dad is a doctor.' Q: What's his job?",
+      "idea": "his job 对应 is a doctor。",
+      "ans": "答案：a doctor（医生）。"
+     }
+    ]
+   },
+   {
+    "name": "短文填空与语境判断",
+    "desc": "短文填空要结合上下文，判断时态、词性和单复数。常见提示词有 yesterday（过去时）、tomorrow（将来时）、every day（一般现在时）。",
+    "tip": "时间状语是判断时态的关键。",
+    "ex": [
+     {
+      "q": "Yesterday it ___ (be) cold and windy.",
+      "idea": "yesterday 提示过去时，主语 it 用 was。",
+      "ans": "答案：was。"
+     },
+     {
+      "q": "Tomorrow we ___ (visit) our grandparents.（will 或 be going to 结构）写出一种正确形式。",
+      "idea": "tomorrow 提示将来时。",
+      "ans": "答案：will visit 或 are going to visit。"
+     },
+     {
+      "q": "Every day I ___ (go) to school by bus.",
+      "idea": "every day 提示一般现在时，主语 I 用原形。",
+      "ans": "答案：go。"
+     }
+    ]
+   },
+   {
+    "name": "综合语音：字母组合与重读",
+    "desc": "英语单词中有重读音节，朗读时要读得更响亮、更长。重读通常在实词的词根部分，如 'tea-cher、'Mon-day。",
+    "tip": "重读音节要读得更清楚，轻读音节可以弱化。",
+    "ex": [
+     {
+      "q": "teacher 中哪个音节重读？",
+      "idea": "双音节名词通常第一音节重读。",
+      "ans": "答案：第一个音节 tea- 重读。"
+     },
+     {
+      "q": "Which word has /iː/ sound? bread / green",
+      "idea": "green 中 ee 读 /iː/。",
+      "ans": "答案：green。"
+     },
+     {
+      "q": "Monday 的重读在哪个音节？",
+      "idea": "星期名称第一音节通常重读。",
+      "ans": "答案：第一个音节 Mon- 重读。"
+     }
+    ]
+   }
+  ]
+ }
+]
