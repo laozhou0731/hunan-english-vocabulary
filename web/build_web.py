@@ -7,6 +7,8 @@ ORDER = ["A", "B", "C", "DE", "FGH", "IJKL", "MNO", "PQR", "S", "TZ"]
 TEMPLATE = os.path.join(BASE, "template.html")
 OUT = os.path.join(BASE, "index.html")
 GRAMMAR = os.path.join(BASE, "grammar.json")
+SUBJECT_DIR = os.path.join(BASE, "subjects")
+SUBJECT_KEYS = ["math", "physics", "chemistry", "biology"]
 
 
 def js_json(obj):
@@ -51,10 +53,16 @@ def main():
         grammar = json.load(f)
     with open(TEMPLATE, encoding="utf-8") as f:
         tpl = f.read()
-    for ph in ("/*__DATA__*/", "/*__GRAMMAR__*/"):
+    for ph in ("/*__DATA__*/", "/*__GRAMMAR__*/", "/*__SUBJECTS__*/"):
         if ph not in tpl:
             raise SystemExit(f"placeholder missing: {ph}")
-    out = tpl.replace("/*__DATA__*/", js_json(data)).replace("/*__GRAMMAR__*/", js_json(grammar))
+    subjects = {}
+    for key in SUBJECT_KEYS:
+        with open(os.path.join(SUBJECT_DIR, f"{key}.json"), encoding="utf-8") as f:
+            subjects[key] = json.load(f)
+    out = (tpl.replace("/*__DATA__*/", js_json(data))
+              .replace("/*__GRAMMAR__*/", js_json(grammar))
+              .replace("/*__SUBJECTS__*/", js_json(subjects)))
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(out)
     print(f"{len(data)} 主词条, {sum(len(r['d']) for r in data)} 派生词 -> {OUT}")

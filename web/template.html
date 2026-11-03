@@ -101,14 +101,23 @@
     .entry { padding: 14px; }
   }
 
-  .tabs { display: flex; gap: 4px; margin-left: auto; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto; }
   .tabs button { padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper);
     color: var(--muted); cursor: pointer; font-size: 14px; }
   .tabs button:hover { color: var(--accent); border-color: var(--accent); }
   .tabs button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
-  body.grammar .layout, body.grammar .search, body.grammar #count { display: none; }
-  #grammar { display: none; padding: 8px 0 24px; }
-  body.grammar #grammar { display: block; }
+  body.nonvocab .layout, body.nonvocab .search, body.nonvocab #count { display: none; }
+  #grammar, #subject { display: none; padding: 8px 0 24px; }
+  body.grammar #grammar, body.subject #subject { display: block; }
+  .qx { border-top: 1px dashed var(--line); padding-top: 10px; margin-top: 10px; }
+  .qx:first-of-type { border-top: none; padding-top: 0; margin-top: 12px; }
+  .qx .q { font-size: 14.5px; line-height: 1.75; white-space: pre-line; }
+  .qx .qn { display: inline-block; margin-right: 8px; padding: 0 7px; border-radius: 6px; background: var(--accent-soft);
+    color: var(--accent); font-size: 12px; font-weight: 600; }
+  .qx details { margin-top: 6px; }
+  .qx summary { cursor: pointer; color: var(--accent); font-size: 13.5px; user-select: none; }
+  .qx .idea, .qx .ans { margin: 6px 0 0; font-size: 14px; line-height: 1.75; white-space: pre-line; color: #333; }
+  .qx .ans { color: var(--ink); }
 
   .gtoc { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 4px; }
   .gtoc button { padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper);
@@ -144,6 +153,10 @@
       <nav class="tabs" id="tabs">
         <button type="button" data-tab="vocab" class="on">单词</button>
         <button type="button" data-tab="grammar">语法</button>
+        <button type="button" data-tab="math">数学</button>
+        <button type="button" data-tab="physics">物理</button>
+        <button type="button" data-tab="chemistry">化学</button>
+        <button type="button" data-tab="biology">生物</button>
       </nav>
     </div>
     <div class="search">
@@ -162,6 +175,7 @@
 </div>
 
 <section id="grammar" class="wrap"></section>
+<section id="subject" class="wrap"></section>
 
 <footer>点击单词或 🔊 按钮可朗读 ｜ 音标为英式（RP）｜ 发音由浏览器语音合成提供</footer>
 <div class="toast" id="toast"></div>
@@ -169,6 +183,9 @@
 <script>
 const DATA = /*__DATA__*/;
 const GRAMMAR = /*__GRAMMAR__*/;
+const SUBJECTS = /*__SUBJECTS__*/;
+const TAB_HASH = { grammar: "g", math: "math", physics: "physics", chemistry: "chem", biology: "bio" };
+const TAB_FROM_HASH = Object.fromEntries(Object.entries(TAB_HASH).map(([k, v]) => [v, k]));
 const PER_PAGE = 30;
 const LETTERS = "abcdefghijklmnopqrstuvwxyz".split("").concat(["#"]);
 
@@ -316,8 +333,8 @@ function render() {
 /* ---------- state in URL hash ---------- */
 function saveHash() {
   const parts = [];
-  if (state.tab === "grammar") {
-    parts.push("t=g");
+  if (state.tab !== "vocab") {
+    parts.push("t=" + TAB_HASH[state.tab]);
   } else {
     if (state.letter !== "all") parts.push("l=" + state.letter);
     if (state.q) parts.push("q=" + encodeURIComponent(state.q));
@@ -329,7 +346,7 @@ function saveHash() {
 function loadHash() {
   const h = location.hash.replace(/^#/, "");
   const p = new URLSearchParams(h);
-  state.tab = p.get("t") === "g" ? "grammar" : "vocab";
+  state.tab = TAB_FROM_HASH[p.get("t")] || "vocab";
   if (!h) return;
   if (p.get("l") && LETTERS.includes(p.get("l"))) state.letter = p.get("l");
   if (p.get("q")) { state.q = p.get("q"); $("q").value = state.q; }
@@ -367,10 +384,18 @@ function renderGrammar() {
 
 function showTab() {
   setHeaderVar();
-  const g = state.tab === "grammar";
-  document.body.classList.toggle("grammar", g);
-  document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.tab === state.tab));
-  if (g) { renderGrammar(); saveHash(); } else render();
+  const t = state.tab;
+  document.body.classList.toggle("nonvocab", t !== "vocab");
+  document.body.classList.toggle("grammar", t === "grammar");
+  document.body.classList.toggle("subject", !!SUBJECTS[t]);
+  document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.tab === t));
+  if (t === "vocab") {
+    render();
+  } else {
+    if (t === "grammar") renderGrammar();
+    else renderSubject(t);
+    saveHash();
+  }
 }
 
 function setTab(t) {
@@ -444,6 +469,46 @@ $("clear").addEventListener("click", () => {
   state.q = "";
   state.page = 1;
   render();
+});
+
+/* ---------- subject tabs (数学/物理/化学/生物) ---------- */
+let subjKey = null;
+function subjItemHTML(it) {
+  const exs = (it.ex || []).map((x, n) => `
+    <div class="qx">
+      <div class="q"><span class="qn">例${n + 1}</span>${esc(x.q)}</div>
+      <details>
+        <summary>查看思路与解答</summary>
+        <p class="idea"><b>思路：</b>${esc(x.idea)}</p>
+        <p class="ans"><b>解答：</b>${esc(x.ans)}</p>
+      </details>
+    </div>`).join("");
+  return `
+    <article class="gcard">
+      <h3>${esc(it.name)}</h3>
+      <p class="gdesc">${esc(it.desc)}</p>
+      ${it.tip ? `<p class="gtip">💡 ${esc(it.tip)}</p>` : ""}
+      ${exs}
+    </article>`;
+}
+
+function renderSubject(key) {
+  if (subjKey === key) return;
+  subjKey = key;
+  const chapters = SUBJECTS[key];
+  const toc = chapters.map((c, i) => `<button type="button" data-sec="${i}">${esc(c.title)}</button>`).join("");
+  const body = chapters.map((c, i) => `
+    <section class="gsec" id="ks-${key}-${i}">
+      <h2>${esc(c.title)}</h2>
+      ${c.items.map(subjItemHTML).join("")}
+    </section>`).join("");
+  $("subject").innerHTML = `<div class="gtoc">${toc}</div>${body}`;
+}
+
+$("subject").addEventListener("click", (e) => {
+  const sec = e.target.closest("button[data-sec]");
+  if (!sec) return;
+  document.getElementById(`ks-${state.tab}-${sec.dataset.sec}`).scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 window.addEventListener("hashchange", () => { loadHash(); showTab(); });
