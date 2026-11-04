@@ -1,7 +1,7 @@
 import json, pathlib
 
 HERE = pathlib.Path(__file__).resolve().parent
-SUBJECT_KEYS = ['chinese', 'math', 'english']
+SUBJECT_KEYS = ['chinese', 'math', 'olympiad', 'english']
 
 
 def load(key):
